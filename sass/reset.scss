@@ -1,0 +1,31 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+
+/** neutralisation des styles par défaut des listes **/
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/** suppression du soulignement et de l'affichage en bleu des liens**/
+a {
+    text-decoration: none; 
+    color: black;
+    cursor: pointer;
+}

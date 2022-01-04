@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto", sans-serif;
   font-family: "Shrikhand", cursive;
@@ -6,11 +7,35 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
 }
 
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/** neutralisation des styles par défaut des listes **/
 ul {
-  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/** suppression du soulignement et de l'affichage en bleu des liens**/
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Roboto";
 }
 
 header {
@@ -20,18 +45,63 @@ header {
   width: 100%;
 }
 header #logo {
-  width: 50%;
+  width: 45%;
 }
 header #logo img {
   width: 100%;
+  margin: 15% 0 5%;
+}
+
+main .ville {
+  height: 13vw;
+  background-color: #eaeaea;
+}
+main .ville__gradient {
+  height: 1vw;
+  background: linear-gradient(#d1d1d1, #eaeaea);
+}
+main .ville__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vw;
+  font-weight: 900;
+}
+main header {
+  flex-direction: column;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+main header h1 {
+  font-size: 2rem;
+}
+main header .baseline {
+  font-size: 1.5rem;
+}
+main header .btn {
+  width: 60%;
+  border-radius: 25%;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
 }
 
 footer {
+  padding: 7vw;
   background-color: #353535;
   color: white;
 }
 footer h1 {
   font-family: "Shrikhand";
+}
+footer .footer__menu {
+  line-height: 1.8rem;
+  margin-bottom: 3vw;
+}
+footer .footer__menu li:not(:nth-last-child(-n+2)) {
+  font-weight: bold;
+}
+footer .footer__menu i {
+  margin-right: 2vw;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,28 +34,87 @@ main {
             background: linear-gradient(darken($color-fond_ville,10%), $color-fond_ville);
         }
         &__info {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 45%;
             height: ($ville-hgt)-($gradient-hgt);
+            margin: auto;
             font-weight: 900;
+            i {
+                position: absolute;
+                left: 0;
+            }
         }
     }
-    header {
+    .explorer {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 9%;
         background-color: $color-fond;
         text-align: center;
         h1 {
-            font-size: 2rem;
+/*             padding: 10% 10% 0 10%; */
+            font-size: 1.6rem;
+            font-weight: 900;
         }
         .baseline {
-            font-size: 1.5rem;
+            padding: 5% 0;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
         }
         .btn {
-            width:60%;
-            border-radius: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:75%;
+            height: 12vw;
+            border-radius: 25px;
             background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            box-shadow: $box-shadow;
+            font-weight: 500;
             color: white;
+        }
+    }
+
+    .fctt {
+        padding: 5vw;
+        &__etape {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 90%;
+            height: 20vw;
+            left: 2.5vw;
+            margin-bottom: 1rem;
+            border-radius: 25px;
+            background-color: $color-fond;
+            box-shadow: $box-shadow;
+            &:hover {
+                background-color: lighten($color-primary, 35%);
+            }
+            &__nb {
+                position: absolute;
+                width: 6vw;
+                height: 6vw;
+                left: -3vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $color-primary;
+                font-size: 0.7rem;
+                color: white;
+            }
+            i {
+                margin: 0 5vw 0 7vw;
+                color: darken($color-fond, 50%);
+            }
+            &__txt {
+                font-weight: 700;
+            }
         }
     }
 }

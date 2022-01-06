@@ -85,15 +85,19 @@ main {
             position: relative;
             display: flex;
             align-items: center;
-            width: 90%;
-            height: 20vw;
-            left: 2.5vw;
+            width: 84vw;
+            height: $etape-hgt;
+            left: 3vw;
             margin-bottom: 1rem;
             border-radius: 25px;
             background-color: $color-fond;
             box-shadow: $box-shadow;
+            color: darken($color-fond, 50%);;
+            font-weight: 700;
+            transition: background-color 400ms, color 400ms 150ms;
             &:hover {
                 background-color: lighten($color-primary, 35%);
+                color: $color-primary;
             }
             &__nb {
                 position: absolute;
@@ -110,11 +114,76 @@ main {
             }
             i {
                 margin: 0 5vw 0 7vw;
-                color: darken($color-fond, 50%);
             }
             &__txt {
+                width: 100%;
+                color: initial;
+            }
+        }
+    }
+}
+
+.restaurants {
+    padding: 5vw;
+    background-color: $color-fond;
+    .card {
+        position: relative;
+        margin-bottom: 5vw;
+        border-radius: 25px;
+        box-shadow: $box-shadow;
+        overflow: hidden;
+        &__img {
+            & img {            width: 100%; }
+        }
+        &__info {
+            position: relative;
+            padding: 4.5vw;
+            font-size: 1.5rem;
+            &__name {
                 font-weight: 700;
             }
+            &__loc {}
+            &__off {
+                position: absolute;
+                top: 6vw;
+                right: 6vw;
+                background-color: $color-primary;
+                font-size: 2.5rem;
+            }
+            &__on {
+                position: relative;
+                z-index: 10;
+                width: 5vw;
+                height: 5vw;
+                background-color: white;
+                color: rgba(147,86,220,0);
+            }
+
+            .heart {
+                width: 5vw;
+                height: 5vw;
+                background-color: black;}
+        }
+        
+
+
+        
+        
+        &__new {
+            position: absolute;
+            z-index: 1;
+            top: 5%;
+            right: 5%;
+            width: 20vw;
+            height: 2.5rem;
+            padding: 0.5rem 0;
+            border-radius: 0.5vw;
+            background-color: $color-tertiary;
+            box-shadow: $box-shadow;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: darken($color-tertiary, 40%);
         }
     }
 }

@@ -111,16 +111,20 @@ main .fctt__etape {
   position: relative;
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 84vw;
   height: 20vw;
-  left: 2.5vw;
+  left: 3vw;
   margin-bottom: 1rem;
   border-radius: 25px;
   background-color: #f6f6f6;
   box-shadow: 0 1.5vw 2vw #d0d0d0;
+  color: #777777;
+  font-weight: 700;
+  transition: background-color 400ms, color 400ms 150ms;
 }
 main .fctt__etape:hover {
   background-color: #f2eafb;
+  color: #9356DC;
 }
 main .fctt__etape__nb {
   position: absolute;
@@ -137,10 +141,69 @@ main .fctt__etape__nb {
 }
 main .fctt__etape i {
   margin: 0 5vw 0 7vw;
-  color: #777777;
 }
 main .fctt__etape__txt {
+  width: 100%;
+  color: initial;
+}
+
+.restaurants {
+  padding: 5vw;
+  background-color: #f6f6f6;
+}
+.restaurants .card {
+  position: relative;
+  margin-bottom: 5vw;
+  border-radius: 25px;
+  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  overflow: hidden;
+}
+.restaurants .card__img img {
+  width: 100%;
+}
+.restaurants .card__info {
+  position: relative;
+  padding: 4.5vw;
+  font-size: 1.5rem;
+}
+.restaurants .card__info__name {
   font-weight: 700;
+}
+.restaurants .card__info__off {
+  position: absolute;
+  top: 6vw;
+  right: 6vw;
+  background-color: #9356DC;
+  font-size: 2.5rem;
+}
+.restaurants .card__info__on {
+  position: relative;
+  z-index: 10;
+  width: 5vw;
+  height: 5vw;
+  background-color: white;
+  color: rgba(147, 86, 220, 0);
+}
+.restaurants .card__info .heart {
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+}
+.restaurants .card__new {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  right: 5%;
+  width: 20vw;
+  height: 2.5rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5vw;
+  background-color: #99E2D0;
+  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #278870;
 }
 
 footer {

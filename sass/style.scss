@@ -6,6 +6,7 @@
 @import "reset";
 @import "charte_graphique";
 @import "variables";
+@import "animations";
 
 body {
     font-family: 'Roboto';
@@ -76,6 +77,10 @@ main {
             box-shadow: $box-shadow;
             font-weight: 500;
             color: white;
+            &:hover {
+                box-shadow: $box-shadow--hover;
+                background: linear-gradient(to bottom right, lighten($color-secondary, 2%), lighten($color-primary, 2%));;
+            }
         }
     }
 
@@ -143,31 +148,34 @@ main {
                 font-weight: 700;
             }
             &__loc {}
-            &__off {
+
+            .heart {
                 position: absolute;
                 top: 6vw;
-                right: 6vw;
-                background-color: $color-primary;
-                font-size: 2.5rem;
-            }
-            &__on {
-                position: relative;
+                right: 8vw;
                 z-index: 10;
                 width: 5vw;
                 height: 5vw;
-                background-color: white;
-                color: rgba(147,86,220,0);
+                fill: transparent;
+                stroke-width: 10;
+
+
+                &__full {
+                    stroke: black;
+                    fill: transparent;
+                    opacity: 1;
+                    &:hover {
+                        animation: heartfill 2s ease-in-out forwards;
+                    }
+                }
+
+                    .stop1 { stop-color: darken($color-primary, 0%); }
+                    .stop2 { stop-color: darken($color-secondary, 30%); }
+                    .stop3 { stop-color: darken($color-secondary, 30%); }  
+                    
             }
-
-            .heart {
-                width: 5vw;
-                height: 5vw;
-                background-color: black;}
         }
-        
-
-
-        
+              
         
         &__new {
             position: absolute;
@@ -187,6 +195,7 @@ main {
         }
     }
 }
+
 footer {
     padding: 7vw;
     background-color: $footer-bg;

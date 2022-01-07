@@ -1,0 +1,29 @@
+@keyframes heartfill {
+    0% {
+        stroke: black;
+        fill: transparent;
+    }
+    
+    17%,24%,46%,85%,100% {
+        fill: url(#gradient);
+    }
+    17% {
+        stroke: grey;
+
+        opacity: 0.5;
+    }
+    24% {
+        stroke: white;
+    }
+    46% {
+
+    }
+    85% {
+        stroke: none;
+        opacity: 0.7;
+    }
+    100% {
+        stroke: none;
+        opacity: 1;
+    }
+}

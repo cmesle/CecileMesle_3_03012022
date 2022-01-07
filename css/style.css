@@ -34,6 +34,30 @@ a {
   cursor: pointer;
 }
 
+@keyframes heartfill {
+  0% {
+    stroke: black;
+    fill: transparent;
+  }
+  17%, 24%, 46%, 85%, 100% {
+    fill: url(#gradient);
+  }
+  17% {
+    stroke: grey;
+    opacity: 0.5;
+  }
+  24% {
+    stroke: white;
+  }
+  85% {
+    stroke: none;
+    opacity: 0.7;
+  }
+  100% {
+    stroke: none;
+    opacity: 1;
+  }
+}
 body {
   font-family: "Roboto";
 }
@@ -104,6 +128,10 @@ main .explorer .btn {
   font-weight: 500;
   color: white;
 }
+main .explorer .btn:hover {
+  box-shadow: 0 1.5vw 2vw #c3c3c3;
+  background: linear-gradient(to bottom right, #ff83dd, #985ede);
+}
 main .fctt {
   padding: 5vw;
 }
@@ -169,25 +197,32 @@ main .fctt__etape__txt {
 .restaurants .card__info__name {
   font-weight: 700;
 }
-.restaurants .card__info__off {
+.restaurants .card__info .heart {
   position: absolute;
   top: 6vw;
-  right: 6vw;
-  background-color: #9356DC;
-  font-size: 2.5rem;
-}
-.restaurants .card__info__on {
-  position: relative;
+  right: 8vw;
   z-index: 10;
   width: 5vw;
   height: 5vw;
-  background-color: white;
-  color: rgba(147, 86, 220, 0);
+  fill: transparent;
+  stroke-width: 10;
 }
-.restaurants .card__info .heart {
-  width: 5vw;
-  height: 5vw;
-  background-color: black;
+.restaurants .card__info .heart__full {
+  stroke: black;
+  fill: transparent;
+  opacity: 1;
+}
+.restaurants .card__info .heart__full:hover {
+  animation: heartfill 2s ease-in-out forwards;
+}
+.restaurants .card__info .heart .stop1 {
+  stop-color: #9356dc;
+}
+.restaurants .card__info .heart .stop2 {
+  stop-color: #df00a1;
+}
+.restaurants .card__info .heart .stop3 {
+  stop-color: #df00a1;
 }
 .restaurants .card__new {
   position: absolute;

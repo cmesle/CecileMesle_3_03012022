@@ -12,6 +12,38 @@ body {
     font-family: 'Roboto';
 }
 
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    background-color: rgba(255,255,255,0.5);
+    &__plate {
+        &--1 {
+            stroke: grey;
+            fill: white;
+            stroke-width: 3;
+        }
+        &--2 {
+            stroke: grey;
+            fill: white;
+            stroke-width: 2;
+        }
+    }
+    &__ust--1{
+        overflow: hidden;
+        width: 16%;
+        font-size: 35vw;
+        color: grey;
+    }
+    &__ust--2{
+        overflow: hidden;
+        width: 16%;
+        font-size: 35vw;
+        color: grey;
+    }
+}
 header {
     display: flex;
     justify-content: center;
@@ -158,7 +190,6 @@ main {
                 height: 5vw;
                 fill: transparent;
                 stroke-width: 10;
-
 
                 &__full {
                     stroke: black;

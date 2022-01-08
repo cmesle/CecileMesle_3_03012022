@@ -34,6 +34,73 @@ a {
   cursor: pointer;
 }
 
+/* loader */
+/* loader */
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadein--1 {
+  0% {
+    opacity: 0;
+    transform: translateX();
+  }
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-25vw);
+  }
+}
+@keyframes fadein--2 {
+  0% {
+    opacity: 0;
+    transform: translateX();
+  }
+  35% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-6vw);
+  }
+}
+@keyframes fadein--3 {
+  0% {
+    opacity: 0;
+    transform: translateX();
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(19vw);
+  }
+}
+@keyframes scale--4 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.7;
+    transform: scale(0.65);
+  }
+  99% {
+    opacity: 0.8;
+    transform: scale(0.65);
+  }
+  100% {
+    transform: scale(0.65);
+    opacity: 0.8;
+  }
+}
 @keyframes heartfill {
   0% {
     stroke: black;
@@ -58,39 +125,131 @@ a {
     opacity: 1;
   }
 }
+@keyframes spinner__plate {
+  0% {
+    stroke: black;
+    fill: transparent;
+  }
+  17%, 24%, 46%, 85%, 100% {
+    fill: url(#gradient);
+  }
+  17% {
+    stroke: grey;
+    opacity: 0.5;
+  }
+  24% {
+    stroke: white;
+  }
+  85% {
+    stroke: none;
+    opacity: 0.7;
+  }
+  100% {
+    stroke: none;
+    opacity: 1;
+  }
+}
+@keyframes spinner__ust--1 {}
+html {
+  font-size: 1vw;
+}
+
 body {
   font-family: "Roboto";
 }
 
-.spinner {
+.loader {
+  position: absolute;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
 }
-.spinner__plate--1 {
-  stroke: grey;
-  fill: white;
-  stroke-width: 3;
+.loader .spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.spinner__plate--2 {
-  stroke: grey;
-  fill: white;
-  stroke-width: 2;
+.loader .spinner__plate--1 {
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s alternate infinite;
 }
-.spinner__ust--1 {
-  overflow: hidden;
-  width: 16%;
-  font-size: 35vw;
-  color: grey;
+.loader .spinner__plate--2 {
+  width: 38vw;
+  height: 38vw;
+  transform: rotate(15deg);
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 1s alternate-reverse infinite;
 }
-.spinner__ust--2 {
-  overflow: hidden;
-  width: 16%;
-  font-size: 35vw;
-  color: grey;
+.loader .spinner__plate--3 {
+  width: 28vw;
+  height: 28vw;
+  transform: rotate(-40deg);
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s alternate-reverse infinite;
+}
+.loader .spinner__plate--4 {
+  width: 26vw;
+  height: 26vw;
+  transform: rotate(-55deg);
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 20s alternate infinite;
+}
+.loader .loader__txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand";
+}
+.loader .loader__txt--1 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 12.5rem;
+  opacity: 0;
+  animation: fadein--1 4s 4.8s;
+}
+.loader .loader__txt--2 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 12.5rem;
+  opacity: 0;
+  animation: fadein--2 4s 4.8s;
+}
+.loader .loader__txt--3 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 12.5rem;
+  opacity: 0;
+  animation: fadein--3 4s 4.8s;
+}
+.loader .loader__txt--4 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 12.5rem;
+  opacity: 0;
+  animation: scale--4 4s 8.4s forwards;
 }
 
 header {
@@ -247,13 +406,13 @@ main .fctt__etape__txt {
   animation: heartfill 2s ease-in-out forwards;
 }
 .restaurants .card__info .heart .stop1 {
-  stop-color: #9356dc;
+  stop-color: #9356DC;
 }
 .restaurants .card__info .heart .stop2 {
-  stop-color: #df00a1;
+  stop-color: #FF79DA;
 }
 .restaurants .card__info .heart .stop3 {
-  stop-color: #df00a1;
+  stop-color: #FF79DA;
 }
 .restaurants .card__new {
   position: absolute;

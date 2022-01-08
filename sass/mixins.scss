@@ -1,0 +1,20 @@
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin spinner__plate {
+    position: absolute;
+
+    border-radius: 50%;
+    border: solid 2px $color-primary;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+@mixin loader__txt {
+    position: absolute;
+    font-family: $font-titre;
+    font-size: 12.5rem;
+    opacity: 0;
+}

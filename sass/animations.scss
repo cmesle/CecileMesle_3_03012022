@@ -1,21 +1,22 @@
 /* loader */
+$rotate-dur: 2s;
 @keyframes rotate {
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
 }
-$rotate-dur: 2s;
- 
+
+$fadein-dur: 3s;
 @keyframes fadein--1 {
     0% {
         opacity: 0;
         transform: translateX();
     }
-    20% {
+    5% {
         opacity: 0.2;
     }
     100% {
         opacity: 1;
-        transform: translateX(-25vw);
+        transform: translateX(-17vw);
     }
 }
 
@@ -24,12 +25,12 @@ $rotate-dur: 2s;
         opacity: 0;
         transform: translateX();
     }
-    35% {
+    60% {
         opacity: 0.2;
     }
     100% {
         opacity: 1;
-        transform: translateX(-6vw);
+        transform: translateX(-5vw);
     }
 }
 
@@ -43,7 +44,7 @@ $rotate-dur: 2s;
     }
     100% {
         opacity: 1;
-        transform: translateX(19vw);
+        transform: translateX(0.5vw);
     }
 }
 
@@ -65,7 +66,11 @@ $rotate-dur: 2s;
         opacity: 0.8;
     }  
 }
-$fadein-dur: 4s;
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;    z-index: -999;}
+}
 
 @keyframes heartfill {
     0% {

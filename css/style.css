@@ -49,12 +49,12 @@ a {
     opacity: 0;
     transform: translateX();
   }
-  20% {
+  5% {
     opacity: 0.2;
   }
   100% {
     opacity: 1;
-    transform: translateX(-25vw);
+    transform: translateX(-17vw);
   }
 }
 @keyframes fadein--2 {
@@ -62,12 +62,12 @@ a {
     opacity: 0;
     transform: translateX();
   }
-  35% {
+  60% {
     opacity: 0.2;
   }
   100% {
     opacity: 1;
-    transform: translateX(-6vw);
+    transform: translateX(-5vw);
   }
 }
 @keyframes fadein--3 {
@@ -80,7 +80,7 @@ a {
   }
   100% {
     opacity: 1;
-    transform: translateX(19vw);
+    transform: translateX(0.5vw);
   }
 }
 @keyframes scale--4 {
@@ -99,6 +99,15 @@ a {
   100% {
     transform: scale(0.65);
     opacity: 0.8;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -999;
   }
 }
 @keyframes heartfill {
@@ -150,10 +159,6 @@ a {
   }
 }
 @keyframes spinner__ust--1 {}
-html {
-  font-size: 1vw;
-}
-
 body {
   font-family: "Roboto";
 }
@@ -167,6 +172,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: white;
+  animation: fade-out 1s 5.1s forwards;
 }
 .loader .spinner {
   position: relative;
@@ -175,8 +181,11 @@ body {
   align-items: center;
 }
 .loader .spinner__plate--1 {
-  width: 40vw;
-  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38vw;
+  height: 38vw;
   position: absolute;
   border-radius: 50%;
   border: solid 2px #9356DC;
@@ -184,9 +193,11 @@ body {
   border-right-color: transparent;
   animation: rotate 2s alternate infinite;
 }
-.loader .spinner__plate--2 {
-  width: 38vw;
-  height: 38vw;
+.loader .spinner__plate--1::before {
+  position: absolute;
+  content: "";
+  width: 40vw;
+  height: 40vw;
   transform: rotate(15deg);
   position: absolute;
   border-radius: 50%;
@@ -195,7 +206,8 @@ body {
   border-right-color: transparent;
   animation: rotate 1s alternate-reverse infinite;
 }
-.loader .spinner__plate--3 {
+.loader .spinner__plate--1::after {
+  content: "";
   width: 28vw;
   height: 28vw;
   transform: rotate(-40deg);
@@ -206,7 +218,7 @@ body {
   border-right-color: transparent;
   animation: rotate 2s alternate-reverse infinite;
 }
-.loader .spinner__plate--4 {
+.loader .spinner__plate--2 {
   width: 26vw;
   height: 26vw;
   transform: rotate(-55deg);
@@ -224,32 +236,34 @@ body {
   font-family: "Shrikhand";
 }
 .loader .loader__txt--1 {
+  font-size: 290%;
   position: absolute;
   font-family: "Shrikhand";
-  font-size: 12.5rem;
   opacity: 0;
-  animation: fadein--1 4s 4.8s;
+  animation: fadein--2 3s 0.6s;
+}
+.loader .loader__txt--1::before {
+  content: "oh";
+  position: absolute;
+  font-family: "Shrikhand";
+  opacity: 0;
+  font-size: 100%;
+  animation: fadein--1 3s 0.6s;
+}
+.loader .loader__txt--1::after {
+  content: "food";
+  position: absolute;
+  font-family: "Shrikhand";
+  opacity: 0;
+  font-size: 100%;
+  animation: fadein--3 3s 0.6s;
 }
 .loader .loader__txt--2 {
   position: absolute;
   font-family: "Shrikhand";
-  font-size: 12.5rem;
   opacity: 0;
-  animation: fadein--2 4s 4.8s;
-}
-.loader .loader__txt--3 {
-  position: absolute;
-  font-family: "Shrikhand";
-  font-size: 12.5rem;
-  opacity: 0;
-  animation: fadein--3 4s 4.8s;
-}
-.loader .loader__txt--4 {
-  position: absolute;
-  font-family: "Shrikhand";
-  font-size: 12.5rem;
-  opacity: 0;
-  animation: scale--4 4s 8.4s forwards;
+  font-size: 295%;
+  animation: scale--4 3s 3s forwards;
 }
 
 header {
@@ -263,11 +277,11 @@ header #logo {
 }
 header #logo img {
   width: 100%;
-  margin: 15% 0 5%;
+  margin: 13% 0 5%;
 }
 
 main .ville {
-  height: 15vw;
+  height: 13vw;
   background-color: #eaeaea;
 }
 main .ville__gradient {
@@ -280,9 +294,9 @@ main .ville__info {
   justify-content: center;
   align-items: center;
   width: 45%;
-  height: 13.5vw;
+  height: 11.5vw;
   margin: auto;
-  font-weight: 900;
+  font-weight: 700;
 }
 main .ville__info i {
   position: absolute;
@@ -297,12 +311,12 @@ main .explorer {
   text-align: center;
 }
 main .explorer h1 {
-  /*             padding: 10% 10% 0 10%; */
-  font-size: 1.6rem;
-  font-weight: 900;
+  padding: 2% 12% 0 12%;
+  font-size: 150%;
+  font-weight: 700;
 }
 main .explorer .baseline {
-  padding: 5% 0;
+  padding: 4% 0;
   font-size: 1.1rem;
   line-height: 1.3rem;
 }
@@ -310,8 +324,9 @@ main .explorer .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 6%;
   width: 75%;
-  height: 12vw;
+  height: 13vw;
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0 1.5vw 2vw #d0d0d0;
@@ -323,7 +338,11 @@ main .explorer .btn:hover {
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
 }
 main .fctt {
-  padding: 5vw;
+  padding: 13vw 5vw;
+}
+main .fctt h1 {
+  font-size: 150%;
+  font-weight: 700;
 }
 main .fctt__etape {
   position: relative;

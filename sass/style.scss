@@ -109,6 +109,11 @@ header {
 }
 
 main {
+    h1 {
+        font-size: 150%;
+        font-weight: 700;
+        margin-bottom: 7vw;
+    }
     .ville {
         height: $ville-hgt;
         background-color: $color-fond_ville;
@@ -215,7 +220,7 @@ main {
         .card {
             position: relative;
             margin-bottom: 5vw;
-            border-radius: 25px;
+            border-radius: 15px;
             box-shadow: $box-shadow;
             overflow: hidden;
             &__img {
@@ -223,36 +228,44 @@ main {
             }
             &__info {
                 position: relative;
-                padding: 4.5vw;
-                font-size: 1.5rem;
+                padding: 4vw;
+                font-size: 115%;
                 &__name {
-                    font-weight: 700;
+                    font-weight: 800;
                 }
-                &__loc {}
+                &__loc {
+                    margin-top: 1vw;
+                }
 
                 .heart {
+                    @include flexcenter;
                     position: absolute;
-                    top: 6vw;
-                    right: 8vw;
+                    top: 9vw;
+                    right: 10vw;
                     z-index: 10;
-                    width: 5vw;
-                    height: 5vw;
-                    fill: transparent;
-                    stroke-width: 10;
-
-                    &__full {
-                        stroke: black;
-                        fill: transparent;
-                        opacity: 1;
-                        &:hover {
-                            animation: heartfill 2s ease-in-out forwards;
-                        }
+/*                     width: 5.5vw;
+                    height: 4.5vw; */
+                    font-size: 150%;
+                    &:hover > .heart__empty {
+                        transform-origin: 50%,50%;
+                        animation: fade-out 400ms ease-in-out forwards;
                     }
-
-                        .stop1 { stop-color: $color-primary; }
-                        .stop2 { stop-color: $color-secondary; }
-                        .stop3 { stop-color: $color-secondary; }  
-                        
+                    &__empty {
+                        position: absolute;
+                        cursor: pointer;
+                    }
+                    
+                    &__full {
+                        position: absolute;
+                        background: linear-gradient(to top right, $color-secondary, $color-primary);
+                        opacity: 0;
+                        background-clip: text;
+                        color: transparent;
+                        cursor: pointer;
+                        &:hover {
+                            animation: heartfill 400ms ease-in-out forwards;
+                        }
+                    }         
                 }
             }
                 
@@ -262,14 +275,14 @@ main {
                 z-index: 1;
                 top: 5%;
                 right: 5%;
-                width: 20vw;
-                height: 2.5rem;
-                padding: 0.5rem 0;
+                width: 22vw;
+                height: 7.5vw;
+                line-height: 190%;
                 border-radius: 0.5vw;
                 background-color: $color-tertiary;
                 box-shadow: $box-shadow;
                 text-align: center;
-                font-size: 1.2rem;
+                font-size: 95%;
                 font-weight: 700;
                 color: darken($color-tertiary, 40%);
             }

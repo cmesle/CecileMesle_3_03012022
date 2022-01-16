@@ -114,6 +114,7 @@ header {
     }
 }
 
+/* PAGE D'ACCUEIL */
 main {
     h1 {
         font-size: 150%;
@@ -222,7 +223,6 @@ main {
     }
 }
 
-/* PAGE D'ACCUEIL */
     .restaurants {
         padding: 15vw 5vw 11vw;
         background-color: $color-fond;
@@ -336,6 +336,9 @@ main {
             }
             i {
                 margin-right: 2vw;
+            }
+            a {
+                color: $footer-text;
             }
         }
     }

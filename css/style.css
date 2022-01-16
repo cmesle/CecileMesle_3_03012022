@@ -294,6 +294,7 @@ header #logo img {
   width: 100%;
 }
 
+/* PAGE D'ACCUEIL */
 main h1 {
   font-size: 150%;
   font-weight: 800;
@@ -405,7 +406,6 @@ main .fctt__etape__txt {
   color: initial;
 }
 
-/* PAGE D'ACCUEIL */
 .restaurants {
   padding: 15vw 5vw 11vw;
   background-color: #f6f6f6;
@@ -520,6 +520,9 @@ footer .footer__menu li:not(:nth-last-child(-n+2)) {
 }
 footer .footer__menu i {
   margin-right: 2vw;
+}
+footer .footer__menu a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

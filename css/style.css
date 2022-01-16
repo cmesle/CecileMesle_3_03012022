@@ -73,9 +73,9 @@ a {
 @keyframes fadein--3 {
   0% {
     opacity: 0;
-    transform: translateX();
+    transform: translateX(5vw);
   }
-  60% {
+  5% {
     opacity: 0.2;
   }
   100% {
@@ -275,17 +275,23 @@ body {
 }
 
 header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 6% 0 2%;
+}
+header .home {
+  position: absolute;
+  left: 5vw;
+  font-size: 120%;
 }
 header #logo {
   width: 45%;
 }
 header #logo img {
   width: 100%;
-  margin: 13% 0 5%;
 }
 
 main h1 {
@@ -350,7 +356,7 @@ main .explorer .btn {
 }
 main .explorer .btn:hover {
   box-shadow: 0 1.5vw 2vw #c3c3c3;
-  background: linear-gradient(to bottom right, #ff83dd, #985ede);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 main .fctt {
   padding: 12.5vw 5vw;
@@ -399,6 +405,7 @@ main .fctt__etape__txt {
   color: initial;
 }
 
+/* PAGE D'ACCUEIL */
 .restaurants {
   padding: 15vw 5vw 11vw;
   background-color: #f6f6f6;
@@ -423,6 +430,7 @@ main .fctt__etape__txt {
 }
 .restaurants .card__info__loc {
   margin-top: 1vw;
+  font-weight: 300;
 }
 .restaurants .card__info .heart {
   display: flex;
@@ -460,9 +468,6 @@ main .fctt__etape__txt {
   -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
-  /*                         &:hover {
-                              animation: heartfill 400ms ease-in-out forwards;
-                          } */
 }
 .restaurants .card__new {
   position: absolute;
@@ -479,6 +484,23 @@ main .fctt__etape__txt {
   font-size: 95%;
   font-weight: 700;
   color: #278870;
+}
+
+/* PAGE RESTO */
+.resto__header img {
+  width: 100%;
+}
+
+.menu {
+  position: relative;
+  z-index: 1;
+  top: -5vw;
+  padding: 2vw;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+}
+.menu h1 {
+  font-family: "Shrikhand";
 }
 
 footer {

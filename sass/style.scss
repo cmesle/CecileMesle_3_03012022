@@ -97,13 +97,19 @@ body {
 }
 
 header {
+    position: relative;
     @include flexcenter;
     width: 100%;
+    padding: 6% 0 2%;
+    .home {
+        position: absolute;
+        left: 5vw;
+        font-size: 120%;
+    }
     #logo {
         width: 45%;
         img {
             width:100%;
-            margin: 13% 0 5%;
         }
     }
 }
@@ -165,7 +171,7 @@ main {
             color: white;
             &:hover {
                 box-shadow: $box-shadow--hover;
-                background: linear-gradient(to bottom right, lighten($color-secondary, 2%), lighten($color-primary, 2%));;
+                background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));;
             }
         }
     }
@@ -216,6 +222,7 @@ main {
     }
 }
 
+/* PAGE D'ACCUEIL */
     .restaurants {
         padding: 15vw 5vw 11vw;
         background-color: $color-fond;
@@ -237,6 +244,7 @@ main {
                 }
                 &__loc {
                     margin-top: 1vw;
+                    font-weight: 300;
                 }
 
                 .heart {
@@ -271,13 +279,9 @@ main {
                         background-clip: text; -webkit-background-clip: text;
                         color: transparent;
                         cursor: pointer;
-/*                         &:hover {
-                            animation: heartfill 400ms ease-in-out forwards;
-                        } */
                     }         
                 }
             }
-                
             
             &__new {
                 position: absolute;
@@ -295,6 +299,25 @@ main {
                 font-weight: 700;
                 color: darken($color-tertiary, 40%);
             }
+        }
+    }
+
+/* PAGE RESTO */
+    .resto__header {
+        & img {
+            width: 100%;
+        }
+
+    }
+    .menu {
+        position: relative;
+        z-index: 1;
+        top: -5vw;
+        padding: 2vw;
+        background-color: $color-fond;
+        border-radius: 20px 20px 0 0;
+        h1 {
+            font-family: $font-titre;
         }
     }
 

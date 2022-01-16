@@ -37,9 +37,9 @@ $fadein-dur: 3s;
 @keyframes fadein--3 {
     0% {
         opacity: 0;
-        transform: translateX();
+        transform: translateX(5vw);
     }
-    60% {
+    5% {
         opacity:0.2;
     }
     100% {

@@ -76,31 +76,33 @@ $fadein-dur: 3s;
 
 @keyframes heartfade {
     0% {
-        opacity: 1;
+        color: black;
     }
     
     86% {
-        opacity: 0;
+        color: black;
     }
+    99% {        scale: 1;}
     100% {
-        opacity: 0;
+        color: transparent;
+        scale: 0.9;
     }
 }
 @keyframes heartfill {
     0% {
         opacity: 0;
+        transform: scale(0.5);
     }
     
-    5% {
-        opacity: 0.5;
-    }
-    85% {
-        transform: scale(1.1);
+    17% {
         opacity: 0.7;
     }
+    85% {
+        opacity: 0.9;
+    }
     100% {
-        transform: scale(1);
         opacity: 1;
+        transform: scale(1);
     }
 }
 

@@ -111,8 +111,8 @@ header {
 main {
     h1 {
         font-size: 150%;
-        font-weight: 700;
-        margin-bottom: 7vw;
+        font-weight: 800;
+        margin-bottom: 6vw;
     }
     .ville {
         height: $ville-hgt;
@@ -138,24 +138,26 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 9%;
+        padding: 9% 5%;
         background-color: $color-fond;
         text-align: center;
         h1 {
-            padding: 2% 12% 0 12%;
-            font-size: 150%;
-            font-weight: 700;
+            margin-bottom: 0;
+            padding: 1.5% 10% 0 10%;
+            font-size: 156%;
+            font-weight: 800;
+            line-height: 1.8rem;
         }
         .baseline {
-            padding: 4% 0;
-            font-size: 1.1rem;
+            padding-top: 4%;
+            font-size: 110%;
             line-height: 1.3rem;
         }
         .btn {
             @include flexcenter;
-            margin: 6%;
-            width:75%;
-            height: 13vw;
+            margin: 9% 6% 6%;
+            width: 67%;
+            height: 13.5vw;
             border-radius: 25px;
             background: linear-gradient(to bottom right, $color-secondary, $color-primary);
             box-shadow: $box-shadow;
@@ -169,10 +171,10 @@ main {
     }
 
     .fctt {
-        padding: 13vw 5vw;
+        padding: 12.5vw 5vw;
         h1 {
             font-size: 150%;
-            font-weight: 700;
+            font-weight: 800;
         }
         &__etape {
             position: relative;
@@ -181,8 +183,8 @@ main {
             width: 84vw;
             height: $etape-hgt;
             left: 3vw;
-            margin-bottom: 1rem;
-            border-radius: 25px;
+            margin-bottom: 1.4rem;
+            border-radius: 20px;
             background-color: $color-fond;
             box-shadow: $box-shadow;
             color: darken($color-fond, 50%);;
@@ -215,7 +217,7 @@ main {
 }
 
     .restaurants {
-        padding: 5vw;
+        padding: 15vw 5vw 11vw;
         background-color: $color-fond;
         .card {
             position: relative;
@@ -248,10 +250,16 @@ main {
                     font-size: 150%;
                     &:hover > .heart__empty {
                         transform-origin: 50%,50%;
-                        animation: fade-out 400ms ease-in-out forwards;
+                        animation: heartfade 400ms ease-in-out forwards;
+                    }
+                    &:hover > .heart__full {
+                        animation: heartfill 400ms ease-in-out forwards;
                     }
                     &__empty {
                         position: absolute;
+                        background: linear-gradient(to top right, $color-secondary, $color-primary);
+                        background-clip: text; -webkit-background-clip: text;
+                        color: black;
                         cursor: pointer;
                     }
                     
@@ -259,12 +267,13 @@ main {
                         position: absolute;
                         background: linear-gradient(to top right, $color-secondary, $color-primary);
                         opacity: 0;
+                        transform-origin: 50% 50%;
                         background-clip: text; -webkit-background-clip: text;
                         color: transparent;
                         cursor: pointer;
-                        &:hover {
+/*                         &:hover {
                             animation: heartfill 400ms ease-in-out forwards;
-                        }
+                        } */
                     }         
                 }
             }

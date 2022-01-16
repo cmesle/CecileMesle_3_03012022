@@ -113,29 +113,33 @@ a {
 /* remplissage coeur */
 @keyframes heartfade {
   0% {
-    opacity: 1;
+    color: black;
   }
   86% {
-    opacity: 0;
+    color: black;
+  }
+  99% {
+    scale: 1;
   }
   100% {
-    opacity: 0;
+    color: transparent;
+    scale: 0.9;
   }
 }
 @keyframes heartfill {
   0% {
     opacity: 0;
+    transform: scale(0.5);
   }
-  5% {
-    opacity: 0.5;
-  }
-  85% {
-    transform: scale(1.1);
+  17% {
     opacity: 0.7;
   }
+  85% {
+    opacity: 0.9;
+  }
   100% {
-    transform: scale(1);
     opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes spinner__plate {
@@ -286,8 +290,8 @@ header #logo img {
 
 main h1 {
   font-size: 150%;
-  font-weight: 700;
-  margin-bottom: 7vw;
+  font-weight: 800;
+  margin-bottom: 6vw;
 }
 main .ville {
   height: 13vw;
@@ -315,30 +319,32 @@ main .explorer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 9%;
+  padding: 9% 5%;
   background-color: #f6f6f6;
   text-align: center;
 }
 main .explorer h1 {
-  padding: 2% 12% 0 12%;
-  font-size: 150%;
-  font-weight: 700;
+  margin-bottom: 0;
+  padding: 1.5% 10% 0 10%;
+  font-size: 156%;
+  font-weight: 800;
+  line-height: 1.8rem;
 }
 main .explorer .baseline {
-  padding: 4% 0;
-  font-size: 1.1rem;
+  padding-top: 4%;
+  font-size: 110%;
   line-height: 1.3rem;
 }
 main .explorer .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6%;
-  width: 75%;
-  height: 13vw;
+  margin: 9% 6% 6%;
+  width: 67%;
+  height: 13.5vw;
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  box-shadow: 0 1vw 5vw #d7d7d7;
   font-weight: 500;
   color: white;
 }
@@ -347,11 +353,11 @@ main .explorer .btn:hover {
   background: linear-gradient(to bottom right, #ff83dd, #985ede);
 }
 main .fctt {
-  padding: 13vw 5vw;
+  padding: 12.5vw 5vw;
 }
 main .fctt h1 {
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 800;
 }
 main .fctt__etape {
   position: relative;
@@ -360,10 +366,10 @@ main .fctt__etape {
   width: 84vw;
   height: 20vw;
   left: 3vw;
-  margin-bottom: 1rem;
-  border-radius: 25px;
+  margin-bottom: 1.4rem;
+  border-radius: 20px;
   background-color: #f6f6f6;
-  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  box-shadow: 0 1vw 5vw #d7d7d7;
   color: #777777;
   font-weight: 700;
   transition: background-color 400ms, color 400ms 150ms;
@@ -394,14 +400,14 @@ main .fctt__etape__txt {
 }
 
 .restaurants {
-  padding: 5vw;
+  padding: 15vw 5vw 11vw;
   background-color: #f6f6f6;
 }
 .restaurants .card {
   position: relative;
   margin-bottom: 5vw;
   border-radius: 15px;
-  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  box-shadow: 0 1vw 5vw #d7d7d7;
   overflow: hidden;
 }
 .restaurants .card__img img {
@@ -432,22 +438,31 @@ main .fctt__etape__txt {
 }
 .restaurants .card__info .heart:hover > .heart__empty {
   transform-origin: 50%, 50%;
-  animation: fade-out 400ms ease-in-out forwards;
+  animation: heartfade 400ms ease-in-out forwards;
+}
+.restaurants .card__info .heart:hover > .heart__full {
+  animation: heartfill 400ms ease-in-out forwards;
 }
 .restaurants .card__info .heart__empty {
   position: absolute;
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: black;
   cursor: pointer;
 }
 .restaurants .card__info .heart__full {
   position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
+  transform-origin: 50% 50%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
-}
-.restaurants .card__info .heart__full:hover {
-  animation: heartfill 400ms ease-in-out forwards;
+  /*                         &:hover {
+                              animation: heartfill 400ms ease-in-out forwards;
+                          } */
 }
 .restaurants .card__new {
   position: absolute;
@@ -459,7 +474,7 @@ main .fctt__etape__txt {
   line-height: 190%;
   border-radius: 0.5vw;
   background-color: #99E2D0;
-  box-shadow: 0 1.5vw 2vw #d0d0d0;
+  box-shadow: 0 1vw 5vw #d7d7d7;
   text-align: center;
   font-size: 95%;
   font-weight: 700;

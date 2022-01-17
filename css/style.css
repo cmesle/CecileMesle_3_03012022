@@ -405,53 +405,49 @@ main .fctt__etape__txt {
   width: 100%;
   color: initial;
 }
-
-.restaurants {
+main .restaurants {
   padding: 15vw 5vw 11vw;
   background-color: #f6f6f6;
 }
-.restaurants .card {
+main .restaurants .card {
   position: relative;
   margin-bottom: 5vw;
   border-radius: 15px;
   box-shadow: 0 1vw 5vw #d7d7d7;
   overflow: hidden;
 }
-.restaurants .card__img img {
+main .restaurants .card__img img {
   width: 100%;
 }
-.restaurants .card__info {
-  position: relative;
+main .restaurants .card__info {
   padding: 4vw;
   font-size: 115%;
 }
-.restaurants .card__info__name {
+main .restaurants .card__info__name {
   font-weight: 800;
 }
-.restaurants .card__info__loc {
+main .restaurants .card__info__loc {
   margin-top: 1vw;
   font-weight: 300;
 }
-.restaurants .card__info .heart {
+main .restaurants .card .heart {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 9vw;
-  right: 10vw;
+  bottom: 9.5vw;
+  right: 11.5vw;
   z-index: 10;
-  /*                     width: 5.5vw;
-                      height: 4.5vw; */
-  font-size: 150%;
+  font-size: 170%;
 }
-.restaurants .card__info .heart:hover > .heart__empty {
+main .restaurants .card .heart:hover > .heart__empty {
   transform-origin: 50%, 50%;
   animation: heartfade 400ms ease-in-out forwards;
 }
-.restaurants .card__info .heart:hover > .heart__full {
+main .restaurants .card .heart:hover > .heart__full {
   animation: heartfill 400ms ease-in-out forwards;
 }
-.restaurants .card__info .heart__empty {
+main .restaurants .card .heart__empty {
   position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
@@ -459,7 +455,7 @@ main .fctt__etape__txt {
   color: black;
   cursor: pointer;
 }
-.restaurants .card__info .heart__full {
+main .restaurants .card .heart__full {
   position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
@@ -469,7 +465,7 @@ main .fctt__etape__txt {
   color: transparent;
   cursor: pointer;
 }
-.restaurants .card__new {
+main .restaurants .card__new {
   position: absolute;
   z-index: 1;
   top: 5%;

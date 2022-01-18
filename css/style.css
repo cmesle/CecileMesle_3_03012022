@@ -449,7 +449,7 @@ main .restaurants .card .heart:hover > .heart__empty {
   animation: heartfade 400ms ease-in-out forwards;
 }
 main .restaurants .card .heart:hover > .heart__full {
-  animation: heartfill 400ms ease-in-out forwards;
+  animation: heartfill 400ms ease-out forwards;
 }
 main .restaurants .card .heart__empty {
   position: absolute;
@@ -528,7 +528,7 @@ main .restaurants .card__new {
   animation: heartfade 400ms ease-in-out forwards;
 }
 .menu .menu__header .heart:hover > .heart__full {
-  animation: heartfill 400ms ease-in-out forwards;
+  animation: heartfill 400ms ease-out forwards;
 }
 .menu .menu__header .heart__empty {
   position: absolute;

@@ -31,7 +31,7 @@
         animation: heartfade 400ms ease-in-out forwards;
     }
     &:hover > .heart__full {
-        animation: heartfill 400ms ease-in-out forwards;
+        animation: heartfill 400ms ease-out forwards;
     }
 }
 @mixin heart__empty {

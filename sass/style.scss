@@ -45,7 +45,7 @@ body {
                     height: $plate-size;
                     transform: rotate(15deg);
                     @include spinner__plate;
-                    animation: rotate $rotate-dur/2 alternate-reverse infinite;
+                    animation: rotate calc($rotate-dur / 2) alternate-reverse infinite;
                 }
                 &::after {
                     content: '';
@@ -61,7 +61,7 @@ body {
                 height: $plate-size*0.65;
                 transform: rotate(-55deg);
                 @include spinner__plate;
-                animation: rotate $rotate-dur*10 alternate infinite;
+                animation: rotate calc($rotate-dur * 10) alternate infinite;
             }
         }
     }
@@ -335,6 +335,11 @@ main {
                 width: 102%;
                 margin-bottom: 4vw;
                 padding: 3vw;
+                opacity: 0;
+/*                 animation: cardappear 10s ease-in-out forwards; */
+&:nth-child(2) {@include cardappear($cardappear-dur);}
+&:nth-child(3) {@include cardappear(4);}
+&:last-child {@include cardappear(2);}
                 &__nom {
                     font-weight: 700;
                 }

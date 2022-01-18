@@ -142,31 +142,24 @@ a {
     transform: scale(1);
   }
 }
-@keyframes spinner__plate {
+/* APPARITION DES PLATS */
+@keyframes cardappeark {
   0% {
-    stroke: black;
-    fill: transparent;
+    transform: translateY(1.5vw);
   }
-  17%, 24%, 46%, 85%, 100% {
-    fill: url(#gradient);
+  20% {
+    transform: translateY(1.5vw);
   }
-  17% {
-    stroke: grey;
+  33% {
     opacity: 0.5;
   }
-  24% {
-    stroke: white;
-  }
-  85% {
-    stroke: none;
-    opacity: 0.7;
+  80% {
+    transform: translateY(0);
   }
   100% {
-    stroke: none;
     opacity: 1;
   }
 }
-@keyframes spinner__ust--1 {}
 /*SPINNER */
 /* COEUR */
 body {
@@ -578,6 +571,20 @@ main .restaurants .card__new {
   width: 102%;
   margin-bottom: 4vw;
   padding: 3vw;
+  opacity: 0;
+  /*                 animation: cardappear 10s ease-in-out forwards; */
+}
+.menu .cat .card:nth-child(2) {
+  animation: cardappeark 1s 1s ease-out forwards;
+  /*     animation: cardappeark $cardappear-dur $delay-def ease-out forwards; */
+}
+.menu .cat .card:nth-child(3) {
+  animation: cardappeark 1s 1.25s ease-out forwards;
+  /*     animation: cardappeark $cardappear-dur $delay-def ease-out forwards; */
+}
+.menu .cat .card:last-child {
+  animation: cardappeark 1s 1.5s ease-out forwards;
+  /*     animation: cardappeark $cardappear-dur $delay-def ease-out forwards; */
 }
 .menu .cat .card__nom {
   font-weight: 700;

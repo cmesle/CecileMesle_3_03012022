@@ -59,3 +59,17 @@
     overflow: hidden;
     font-size: 115%;
 }
+
+@mixin cardappear($delay) {
+    $delay-stash: calc($cardappear-dur / $delay);
+    @if unitless($delay-stash) {
+        $delay-def: #{$delay-stash}s;
+        animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
+    }
+        @else {
+            $delay-def: calc($delay-stash + 1s);
+            animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
+        }
+
+/*     animation: cardappeark $cardappear-dur $delay-def ease-out forwards; */
+}

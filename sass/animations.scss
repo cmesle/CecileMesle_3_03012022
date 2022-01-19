@@ -125,3 +125,23 @@ $cardappear-dur: 1s;
         opacity: 1;
     }
 }
+
+/* SELECTION D'UN PLAT */
+@keyframes platselec_txtshrink {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes platselec_selec {
+    0% {
+
+    }
+    100% {
+        right: 0;
+    }
+    
+}

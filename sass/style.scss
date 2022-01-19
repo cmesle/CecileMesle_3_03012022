@@ -336,15 +336,19 @@ main {
                 margin-bottom: 4vw;
                 padding: 3vw;
                 opacity: 0;
-/*                 animation: cardappear 10s ease-in-out forwards; */
-&:nth-child(2) {@include cardappear($cardappear-dur);}
-&:nth-child(3) {@include cardappear(4);}
-&:last-child {@include cardappear(2);}
+                &:nth-child(2) {@include cardappear($cardappear-dur);}
+                &:nth-child(3) {@include cardappear(4);}
+                &:last-child {@include cardappear(2);}
+                &:hover > &__selec {
+                    animation: cardselec_selec 1s ease-in-out;
+                }
                 &__nom {
+                    overflow: hidden;
                     font-weight: 700;
                 }
                 &__detail {
                     padding-top: 1.1vw;
+                    overflow: hidden;
                     font-size: 0.9rem;
                     font-weight: 300;
                 }

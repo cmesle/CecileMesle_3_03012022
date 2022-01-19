@@ -127,6 +127,7 @@ $cardappear-dur: 1s;
 }
 
 /* SELECTION D'UN PLAT */
+$selec-dur: 2s;
 @keyframes platselec_txtshrink {
     0% {
         width: 100%;
@@ -142,6 +143,26 @@ $cardappear-dur: 1s;
     }
     100% {
         right: 0;
+    }
+    
+}
+@keyframes platselec_selec_i {
+    0% {
+    }
+    40% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+    
+}
+@keyframes platselec_prix {
+    0% {
+        
+    }
+    100% {
+        right: $prix_right2;
     }
     
 }

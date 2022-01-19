@@ -336,28 +336,52 @@ main {
                 margin-bottom: 4vw;
                 padding: 3vw;
                 opacity: 0;
+                cursor: pointer;
                 &:nth-child(2) {@include cardappear($cardappear-dur);}
                 &:nth-child(3) {@include cardappear(4);}
                 &:last-child {@include cardappear(2);}
-                &:hover > &__selec {
-                    animation: cardselec_selec 1s ease-in-out;
+/*                 &:hover > .card__selec {
+                    animation: platselec_selec $selec-dur ease-in-out forwards;
+                } */
+                &:hover > .card__selec i {
+                    animation: platselec_selec_i $selec-dur ease-in-out forwards;
+                }
+/*                 &:hover > .card__prix {
+                    animation: platselec_prix $selec-dur ease-in-out forwards;
+                } */
+
+
+                &__info {
+                    width: 100%;
+                    white-space: nowrap;
+                    transition: width $selec-dur ease-in-out;
+                    &:hover {width: 63%;}
+                    &:hover ~ .card__selec {right: 0;}
+                    &:hover ~ .card__prix {right: $prix_right2;}
                 }
                 &__nom {
                     overflow: hidden;
                     font-weight: 700;
+                    text-overflow: ellipsis;
                 }
                 &__detail {
                     padding-top: 1.1vw;
                     overflow: hidden;
                     font-size: 0.9rem;
                     font-weight: 300;
+                    text-overflow: ellipsis;
                 }
                 &__prix {
                     position: absolute;
-                    bottom: 3vw;
+                    display: flex;
+                    align-items: end;
+                    height: 100%;
+                    top: 0;
                     right: 6vw;
+                    padding-bottom: 3vw;
                     font-size: 0.9rem;
                     font-weight: 800;
+                    transition: right $selec-dur ease-in-out;
                 }
                 &__selec {
                     display: flex;
@@ -370,6 +394,8 @@ main {
                     height: 100%;
                     background-color: $color-tertiary;
                     color: white;
+                    font-size: 135%;
+                    transition: right 2s ease-in-out;
                 }
             }
         }

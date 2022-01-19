@@ -174,6 +174,19 @@ a {
     right: 0;
   }
 }
+@keyframes platselec_selec_i {
+  40% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes platselec_prix {
+  100% {
+    right: calc(6vw + 20%);
+  }
+}
 /*SPINNER */
 /* COEUR */
 body {
@@ -586,6 +599,13 @@ main .restaurants .card__new {
   margin-bottom: 4vw;
   padding: 3vw;
   opacity: 0;
+  cursor: pointer;
+  /*                 &:hover > .card__selec {
+                      animation: platselec_selec $selec-dur ease-in-out forwards;
+                  } */
+  /*                 &:hover > .card__prix {
+                      animation: platselec_prix $selec-dur ease-in-out forwards;
+                  } */
 }
 .menu .cat .card:nth-child(2) {
   animation: cardappeark 1s 1s ease-out forwards;
@@ -599,25 +619,46 @@ main .restaurants .card__new {
   animation: cardappeark 1s 1.5s ease-out forwards;
   /*     animation: cardappeark $cardappear-dur $delay-def ease-out forwards; */
 }
-.menu .cat .card:hover > .menu .cat .card__selec {
-  animation: cardselec_selec 1s ease-in-out;
+.menu .cat .card:hover > .card__selec i {
+  animation: platselec_selec_i 2s ease-in-out forwards;
+}
+.menu .cat .card__info {
+  width: 100%;
+  white-space: nowrap;
+  transition: width 2s ease-in-out;
+}
+.menu .cat .card__info:hover {
+  width: 63%;
+}
+.menu .cat .card__info:hover ~ .card__selec {
+  right: 0;
+}
+.menu .cat .card__info:hover ~ .card__prix {
+  right: calc(6vw + 20%);
 }
 .menu .cat .card__nom {
   overflow: hidden;
   font-weight: 700;
+  text-overflow: ellipsis;
 }
 .menu .cat .card__detail {
   padding-top: 1.1vw;
   overflow: hidden;
   font-size: 0.9rem;
   font-weight: 300;
+  text-overflow: ellipsis;
 }
 .menu .cat .card__prix {
   position: absolute;
-  bottom: 3vw;
+  display: flex;
+  align-items: end;
+  height: 100%;
+  top: 0;
   right: 6vw;
+  padding-bottom: 3vw;
   font-size: 0.9rem;
   font-weight: 800;
+  transition: right 2s ease-in-out;
 }
 .menu .cat .card__selec {
   display: flex;
@@ -630,6 +671,8 @@ main .restaurants .card__new {
   height: 100%;
   background-color: #99E2D0;
   color: white;
+  font-size: 135%;
+  transition: right 2s ease-in-out;
 }
 .menu .btn {
   margin: 10vw auto 20vw;

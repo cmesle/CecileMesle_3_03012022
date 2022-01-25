@@ -328,6 +328,7 @@ header #logo img {
   box-shadow: 0 1vw 5vw #d7d7d7;
   font-weight: 500;
   color: white;
+  cursor: pointer;
 }
 .btn:hover {
   box-shadow: 0 1.5vw 2vw #c3c3c3;
@@ -335,6 +336,9 @@ header #logo img {
 }
 
 /* PAGE D'ACCUEIL */
+main {
+  overflow: hidden;
+}
 main h1 {
   font-size: 150%;
   font-weight: 800;
@@ -507,15 +511,18 @@ main .restaurants .card__new {
 }
 
 /* PAGE RESTO */
-.resto__header img {
+.resto__header {
   width: 110%;
+  height: 59vw;
+}
+.resto__header img {
+  width: 100%;
   transform: translateX(-5vw);
 }
 
 .menu {
   position: relative;
   z-index: 1;
-  top: -16vw;
   padding: 2.5vw 5vw;
   background-color: #f6f6f6;
   border-radius: 10vw 10vw 0 0;
@@ -600,12 +607,6 @@ main .restaurants .card__new {
   padding: 3vw;
   opacity: 0;
   cursor: pointer;
-  /*                 &:hover > .card__selec {
-                      animation: platselec_selec $selec-dur ease-in-out forwards;
-                  } */
-  /*                 &:hover > .card__prix {
-                      animation: platselec_prix $selec-dur ease-in-out forwards;
-                  } */
 }
 .menu .cat .card:nth-child(2) {
   animation: cardappeark 1s 1s ease-out forwards;
@@ -616,22 +617,22 @@ main .restaurants .card__new {
 .menu .cat .card:last-child {
   animation: cardappeark 1s 1.5s ease-out forwards;
 }
+.menu .cat .card:hover > .card__info {
+  width: 63%;
+}
+.menu .cat .card:hover > .card__selec {
+  right: 0;
+}
 .menu .cat .card:hover > .card__selec i {
-  animation: platselec_selec_i 2s ease-in-out forwards;
+  animation: platselec_selec_i 1s ease-in-out forwards;
+}
+.menu .cat .card:hover > .card__prix {
+  right: calc(6vw + 20%);
 }
 .menu .cat .card__info {
   width: 100%;
   white-space: nowrap;
-  transition: width 2s ease-in-out;
-}
-.menu .cat .card__info:hover {
-  width: 63%;
-}
-.menu .cat .card__info:hover ~ .card__selec {
-  right: 0;
-}
-.menu .cat .card__info:hover ~ .card__prix {
-  right: calc(6vw + 20%);
+  transition: width 1s ease-in-out;
 }
 .menu .cat .card__nom {
   overflow: hidden;
@@ -655,7 +656,7 @@ main .restaurants .card__new {
   padding-bottom: 3vw;
   font-size: 0.9rem;
   font-weight: 800;
-  transition: right 2s ease-in-out;
+  transition: right 1s ease-in-out;
 }
 .menu .cat .card__selec {
   display: flex;
@@ -669,12 +670,11 @@ main .restaurants .card__new {
   background-color: #99E2D0;
   color: white;
   font-size: 135%;
-  transition: right 2s ease-in-out;
+  transition: right 1s ease-in-out;
 }
 .menu .btn {
   margin: 10vw auto 20vw;
   width: 53%;
-  cursor: pointer;
 }
 
 footer {

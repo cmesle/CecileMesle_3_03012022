@@ -58,6 +58,9 @@
     background-color: white;
     overflow: hidden;
     font-size: 115%;
+    &:hover {
+        box-shadow: $box-shadow--hover;
+    }
 }
 
 @mixin cardappear($delay) {

@@ -9,14 +9,13 @@ $fadein-dur: 3s;
 @keyframes fadein--1 {
     0% {
         opacity: 0;
-        transform: translateX();
     }
     5% {
         opacity: 0.2;
     }
     100% {
         opacity: 1;
-        transform: translateX(-17vw);
+        transform: translateX(-24vw);
     }
 }
 
@@ -25,7 +24,7 @@ $fadein-dur: 3s;
         opacity: 0;
         transform: translateX();
     }
-    60% {
+    30% {
         opacity: 0.2;
     }
     100% {
@@ -39,19 +38,23 @@ $fadein-dur: 3s;
         opacity: 0;
         transform: translateX(5vw);
     }
-    5% {
+    50% {
         opacity:0.2;
     }
     100% {
         opacity: 1;
-        transform: translateX(0.5vw);
+        transform: translateX(20vw);
     }
 }
 
 @keyframes scale--4 {
     0% {
-        transform: scale(1);
+
         opacity: 0;
+    }
+    75% {
+        opacity: 0.7;
+
     }
     80% {
         opacity: 0.7;
@@ -127,7 +130,7 @@ $cardappear-dur: 1s;
 }
 
 /* SELECTION D'UN PLAT */
-$selec-dur: 1s;
+$selec-dur: 700ms;
 @keyframes platselec_txtshrink {
     0% {
         width: 100%;

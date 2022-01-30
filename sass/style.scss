@@ -10,12 +10,13 @@
 @import "mixins";
 
 
+
 body {
     font-family: 'Roboto';
 }
 
 .loader {
-    position: absolute;
+    position: relative;
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -23,71 +24,72 @@ body {
     width:100vw;
     height:100vh;
     background-color: rgba(255,255,255,1);
-    animation: fade-out 1s $fadein-dur*1.7 forwards;
+//    animation: fade-out 1s $fadein-dur*1.7 forwards;
 
     .spinner {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: $plate-size;
+        height: $plate-size;
         &__plate {
 
             &--1 {
                 @include flexcenter;
-                width: $plate-size*0.95;
-                height: $plate-size*0.95;
+                width: 100%;
+                height: 100%;
+                transform: rotate(15deg);
                 @include spinner__plate;
-                animation: rotate $rotate-dur alternate infinite;
-                &::before {
+                animation: rotate calc($rotate-dur / 2) alternate infinite;
+                &::after {
                     position: absolute;
                     content: "";
-                    width: $plate-size;
-                    height: $plate-size;
-                    transform: rotate(15deg);
-                    @include spinner__plate;
-                    animation: rotate calc($rotate-dur / 2) alternate-reverse infinite;
-                }
-                &::after {
-                    content: '';
-                    width: $plate-size*0.7;
-                    height: $plate-size*0.7;
+                    width: 92%;
+                    height: 92%;
                     transform: rotate(-40deg);
                     @include spinner__plate;
                     animation: rotate $rotate-dur alternate-reverse infinite;
                 }
             }
             &--2 {
-                width: $plate-size*0.65;
-                height: $plate-size*0.65;
-                transform: rotate(-55deg);
+                @include flexcenter;
+                width: 70%;
+                height: 70%;
+                transform: rotate(-40deg);
                 @include spinner__plate;
-                animation: rotate calc($rotate-dur * 10) alternate infinite;
+                animation: rotate $rotate-dur alternate infinite;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 90%;
+                    height: 90%;
+                    transform: rotate(-55deg);
+                    @include spinner__plate;
+                    animation: rotate calc($rotate-dur * 10) alternate infinite;
+                }
             }
         }
     }
 
     .loader__txt {
+        position: absolute;
         @include flexcenter;
         font-family: $font-titre;
         &--1 {
-            font-size: 290%;
+            @include loader__txt;
+            animation: fadein--1 $fadein-dur $fadein-dur*0.2;
+        }
+        &--2 {
             @include loader__txt;
             animation: fadein--2 $fadein-dur $fadein-dur*0.2;
-            &::before {
-                content: "oh";
-                @include loader__txt;
-                font-size: 100%;
-                animation: fadein--1 $fadein-dur $fadein-dur*0.2;
-            }
-            &::after {
-                content: "food";
-                @include loader__txt;
-                font-size: 100%;
-                animation: fadein--3 $fadein-dur $fadein-dur*0.2 ;
-            }
+        }
+        &--3 {
+            @include loader__txt;
+            animation: fadein--3 $fadein-dur $fadein-dur*0.2 ;
         }
 
-        &--2 {
+        &--4 {
             @include loader__txt;
             font-size: 295%;
             animation: scale--4 $fadein-dur $fadein-dur forwards;
@@ -191,7 +193,7 @@ main {
             display: flex;
             align-items: center;
             width: 84vw;
-            height: $etape-hgt;
+            line-height: 5rem;
             left: 3vw;
             margin-bottom: 1.4rem;
             border-radius: 20px;
@@ -260,10 +262,8 @@ main {
                 z-index: 1;
                 top: 5%;
                 right: 5%;
-                width: 22vw;
-                height: 7.5vw;
-                line-height: 190%;
-                border-radius: 0.5vw;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
                 background-color: $color-tertiary;
                 box-shadow: 0 0.5vw 1vw rgba(darken($color-fond, 40%), 0.3);
                 text-align: center;
@@ -428,3 +428,5 @@ main {
             }
         }
     }
+
+    @import "desktop";

@@ -11,6 +11,7 @@ body {
 
 * {
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 h1 {
@@ -47,14 +48,13 @@ a {
 @keyframes fadein--1 {
   0% {
     opacity: 0;
-    transform: translateX();
   }
   5% {
     opacity: 0.2;
   }
   100% {
     opacity: 1;
-    transform: translateX(-17vw);
+    transform: translateX(-24vw);
   }
 }
 @keyframes fadein--2 {
@@ -62,7 +62,7 @@ a {
     opacity: 0;
     transform: translateX();
   }
-  60% {
+  30% {
     opacity: 0.2;
   }
   100% {
@@ -75,18 +75,20 @@ a {
     opacity: 0;
     transform: translateX(5vw);
   }
-  5% {
+  50% {
     opacity: 0.2;
   }
   100% {
     opacity: 1;
-    transform: translateX(0.5vw);
+    transform: translateX(20vw);
   }
 }
 @keyframes scale--4 {
   0% {
-    transform: scale(1);
     opacity: 0;
+  }
+  75% {
+    opacity: 0.7;
   }
   80% {
     opacity: 0.7;
@@ -194,7 +196,7 @@ body {
 }
 
 .loader {
-  position: absolute;
+  position: relative;
   z-index: 1001;
   display: flex;
   justify-content: center;
@@ -202,44 +204,34 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  animation: fade-out 1s 5.1s forwards;
 }
 .loader .spinner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40vw;
+  height: 40vw;
 }
 .loader .spinner__plate--1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38vw;
-  height: 38vw;
-  position: absolute;
-  border-radius: 50%;
-  border: solid 2px #9356DC;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  animation: rotate 2s alternate infinite;
-}
-.loader .spinner__plate--1::before {
-  position: absolute;
-  content: "";
-  width: 40vw;
-  height: 40vw;
+  width: 100%;
+  height: 100%;
   transform: rotate(15deg);
   position: absolute;
   border-radius: 50%;
   border: solid 2px #9356DC;
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: rotate 1s alternate-reverse infinite;
+  animation: rotate 1s alternate infinite;
 }
 .loader .spinner__plate--1::after {
+  position: absolute;
   content: "";
-  width: 28vw;
-  height: 28vw;
+  width: 92%;
+  height: 92%;
   transform: rotate(-40deg);
   position: absolute;
   border-radius: 50%;
@@ -249,8 +241,24 @@ body {
   animation: rotate 2s alternate-reverse infinite;
 }
 .loader .spinner__plate--2 {
-  width: 26vw;
-  height: 26vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+  transform: rotate(-40deg);
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s alternate infinite;
+}
+.loader .spinner__plate--2::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 90%;
   transform: rotate(-55deg);
   position: absolute;
   border-radius: 50%;
@@ -260,37 +268,37 @@ body {
   animation: rotate 20s alternate infinite;
 }
 .loader .loader__txt {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Shrikhand";
 }
 .loader .loader__txt--1 {
+  position: absolute;
+  font-family: "Shrikhand";
   font-size: 290%;
-  position: absolute;
-  font-family: "Shrikhand";
   opacity: 0;
-  animation: fadein--2 3s 0.6s;
-}
-.loader .loader__txt--1::before {
-  content: "oh";
-  position: absolute;
-  font-family: "Shrikhand";
-  opacity: 0;
-  font-size: 100%;
   animation: fadein--1 3s 0.6s;
-}
-.loader .loader__txt--1::after {
-  content: "food";
-  position: absolute;
-  font-family: "Shrikhand";
-  opacity: 0;
-  font-size: 100%;
-  animation: fadein--3 3s 0.6s;
 }
 .loader .loader__txt--2 {
   position: absolute;
   font-family: "Shrikhand";
+  font-size: 290%;
+  opacity: 0;
+  animation: fadein--2 3s 0.6s;
+}
+.loader .loader__txt--3 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 290%;
+  opacity: 0;
+  animation: fadein--3 3s 0.6s;
+}
+.loader .loader__txt--4 {
+  position: absolute;
+  font-family: "Shrikhand";
+  font-size: 290%;
   opacity: 0;
   font-size: 295%;
   animation: scale--4 3s 3s forwards;
@@ -398,7 +406,7 @@ main .fctt__etape {
   display: flex;
   align-items: center;
   width: 84vw;
-  height: 20vw;
+  line-height: 5rem;
   left: 3vw;
   margin-bottom: 1.4rem;
   border-radius: 20px;
@@ -438,7 +446,7 @@ main .restaurants {
 }
 main .restaurants .card {
   position: relative;
-  border-radius: 4vw;
+  border-radius: 1rem;
   box-shadow: 0 1vw 5vw #d7d7d7;
   background-color: white;
   overflow: hidden;
@@ -466,8 +474,8 @@ main .restaurants .card .heart {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 12vw;
-  right: 11vw;
+  bottom: 12%;
+  right: 11%;
   z-index: 10;
   font-size: 140%;
 }
@@ -501,10 +509,8 @@ main .restaurants .card__new {
   z-index: 1;
   top: 5%;
   right: 5%;
-  width: 22vw;
-  height: 7.5vw;
-  line-height: 190%;
-  border-radius: 0.5vw;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   background-color: #99E2D0;
   box-shadow: 0 0.5vw 1vw rgba(144, 144, 144, 0.3);
   text-align: center;
@@ -546,8 +552,8 @@ main .restaurants .card__new {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 12vw;
-  right: 11vw;
+  bottom: 12%;
+  right: 11%;
   z-index: 10;
   bottom: unset;
   right: 8vw;
@@ -600,7 +606,7 @@ main .restaurants .card__new {
 }
 .menu .cat .card {
   position: relative;
-  border-radius: 4vw;
+  border-radius: 1rem;
   box-shadow: 0 1vw 5vw #d7d7d7;
   background-color: white;
   overflow: hidden;
@@ -630,7 +636,7 @@ main .restaurants .card__new {
   right: 0;
 }
 .menu .cat .card:hover > .card__selec i {
-  animation: platselec_selec_i 1s ease-in-out forwards;
+  animation: platselec_selec_i 700ms ease-in-out forwards;
 }
 .menu .cat .card:hover > .card__prix {
   right: calc(6vw + 20%);
@@ -638,7 +644,7 @@ main .restaurants .card__new {
 .menu .cat .card__info {
   width: 100%;
   white-space: nowrap;
-  transition: width 1s ease-in-out;
+  transition: width 700ms ease-in-out;
 }
 .menu .cat .card__nom {
   overflow: hidden;
@@ -662,7 +668,7 @@ main .restaurants .card__new {
   padding-bottom: 3vw;
   font-size: 0.9rem;
   font-weight: 800;
-  transition: right 1s ease-in-out;
+  transition: right 700ms ease-in-out;
 }
 .menu .cat .card__selec {
   display: flex;
@@ -676,7 +682,7 @@ main .restaurants .card__new {
   background-color: #99E2D0;
   color: white;
   font-size: 135%;
-  transition: right 1s ease-in-out;
+  transition: right 700ms ease-in-out;
 }
 .menu .btn {
   margin: 10vw auto 20vw;
@@ -703,6 +709,66 @@ footer .footer__menu i {
 }
 footer .footer__menu a {
   color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    line-height: 2rem;
+  }
+
+  .loader .spinner {
+    width: 20vw;
+    height: 20vw;
+  }
+  .loader .spinner__plate {
+    width: 40vw;
+    height: 40vw;
+  }
+  header {
+    padding: 3% 0 1%;
+  }
+  header #logo {
+    width: 20%;
+  }
+
+  main .loca .ville {
+    height: unset;
+    line-height: 2rem;
+  }
+  main .loca .explorer {
+    padding: 0 5%;
+  }
+  main .loca .explorer .baseline {
+    width: 60%;
+  }
+  main .fctt {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+  main .fctt__etape {
+    width: 100%;
+  }
+  main .fctt__etape__nb {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: -0.75rem;
+  }
+  main .fctt__etape i {
+    margin: 0 1.125rem 0 1.875rem;
+  }
+  main .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main .restaurants h1 {
+    width: 100%;
+  }
+  main .restaurants .card {
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,6 +16,7 @@
 @mixin loader__txt {
     position: absolute;
     font-family: $font-titre;
+    font-size: 290%;
     opacity: 0;
 }
 
@@ -23,8 +24,8 @@
 @mixin heart {
     @include flexcenter;
     position: absolute;
-    bottom: 12vw;
-    right: 11vw;
+    bottom: 12%;
+    right: 11%;
     z-index: 10;
     &:hover > .heart__empty {
         transform-origin: 50%,50%;
@@ -53,7 +54,7 @@
 
 @mixin card {
     position: relative;
-    border-radius: 4vw;
+    border-radius: 1rem;
     box-shadow: $box-shadow;
     background-color: white;
     overflow: hidden;

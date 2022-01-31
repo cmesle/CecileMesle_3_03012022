@@ -1,30 +1,15 @@
 @media screen and (min-width:992px) {
     .btn {
         line-height: 2rem;
+        margin: 3%;
     }
     .loader {
         //display: none;
         .spinner {
-            width: 20vw;
-            height: 20vw;
-            &__plate {
-                width: $plate-size;
-                height: $plate-size;
-                &--1 {
-
-                    &::after {
-
-                    }
-                }
-                &--2 {
-
-                    &::after {
-
-                    }
-                }
-            }
+            width: $plate-size--dsk;
+            height: $plate-size--dsk;
         }
-        }
+    }
     // ACCUEIL
     header {
         padding: 3% 0 1%;
@@ -33,25 +18,40 @@
         }
     }
     main {
+        h1 {
+            margin-bottom: 1.4rem;
+        }
 
         .loca {
             .ville {
                 height: unset;
                 line-height: 2rem;
+                &__info {
+                    width: 20%;
+                }
             }
             .explorer {
+                flex-direction: row;
+                justify-content: space-around;
                 padding: 0 5%;
                 .baseline {
                     width: 60%;
+                    padding-top: unset;
                 }
             }
         }
         .fctt {
             display: flex;
             flex-wrap: wrap;
-            width: 30%;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 5vw;
+            h1 {
+//                width: 100%;
+                margin-bottom: 1.4rem;
+            }
             &__etape {
-                width: 100%;
+                width: 25%;
                 $width: 1.5rem;
                 &__nb {
                     width: $width;
@@ -68,12 +68,21 @@
             flex-wrap: wrap;
             justify-content: space-between;
             width: 100%;
+            padding: 5vw;
             h1 {
                 width: 100%;
             }
             .card {
                 width: 20%;
             }
+        }
+    }
+
+    footer {
+        padding: 5vw;
+        text-align: right;
+        .footer__menu {
+            margin-bottom: 0;
         }
     }
 }

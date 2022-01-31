@@ -15,7 +15,8 @@ $fadein-dur: 3s;
     }
     100% {
         opacity: 1;
-        transform: translateX(-24vw);
+        transform: translateX(-145%);
+        // transform: translateX(-24vw);
     }
 }
 
@@ -29,21 +30,21 @@ $fadein-dur: 3s;
     }
     100% {
         opacity: 1;
-        transform: translateX(-5vw);
+        transform: translateX(-25%);
     }
 }
 
 @keyframes fadein--3 {
     0% {
         opacity: 0;
-        transform: translateX(5vw);
+        transform: translateX(15%);
     }
     50% {
         opacity:0.2;
     }
     100% {
         opacity: 1;
-        transform: translateX(20vw);
+        transform: translateX(70%);
     }
 }
 

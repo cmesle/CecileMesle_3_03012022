@@ -16,7 +16,7 @@ body {
 }
 
 .loader {
-    position: relative;
+    position: absolute;
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -24,13 +24,11 @@ body {
     width:100vw;
     height:100vh;
     background-color: rgba(255,255,255,1);
-//    animation: fade-out 1s $fadein-dur*1.7 forwards;
+   animation: fade-out 1s $fadein-dur*1.7 forwards;
 
     .spinner {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
         width: $plate-size;
         height: $plate-size;
         &__plate {
@@ -56,45 +54,45 @@ body {
                 @include flexcenter;
                 width: 70%;
                 height: 70%;
-                transform: rotate(-40deg);
+                transform: rotate(-55deg);
                 @include spinner__plate;
-                animation: rotate $rotate-dur alternate infinite;
-                &::after {
+                animation: rotate calc($rotate-dur * 10) alternate infinite;
+                &::before {
                     position: absolute;
                     content: '';
                     width: 90%;
                     height: 90%;
-                    transform: rotate(-55deg);
+                    transform: rotate(-40deg);
                     @include spinner__plate;
-                    animation: rotate calc($rotate-dur * 10) alternate infinite;
+                    animation: rotate calc($rotate-dur * 1) alternate infinite;
                 }
+            }
+        }
+        .loader__txt {
+            @include flexcenter;
+            font-family: $font-titre;
+            &--1 {
+                @include loader__txt;
+                animation: fadein--1 $fadein-dur $fadein-dur*0.2;
+            }
+            &--2 {
+                @include loader__txt;
+                animation: fadein--2 $fadein-dur $fadein-dur*0.2;
+            }
+            &--3 {
+                @include loader__txt;
+                animation: fadein--3 $fadein-dur $fadein-dur*0.2 ;
+            }
+    
+            &--4 {
+                @include loader__txt;
+                font-size: 295%;
+                animation: scale--4 $fadein-dur $fadein-dur forwards;
             }
         }
     }
 
-    .loader__txt {
-        position: absolute;
-        @include flexcenter;
-        font-family: $font-titre;
-        &--1 {
-            @include loader__txt;
-            animation: fadein--1 $fadein-dur $fadein-dur*0.2;
-        }
-        &--2 {
-            @include loader__txt;
-            animation: fadein--2 $fadein-dur $fadein-dur*0.2;
-        }
-        &--3 {
-            @include loader__txt;
-            animation: fadein--3 $fadein-dur $fadein-dur*0.2 ;
-        }
 
-        &--4 {
-            @include loader__txt;
-            font-size: 295%;
-            animation: scale--4 $fadein-dur $fadein-dur forwards;
-        }
-    }
 
 }
 
@@ -119,8 +117,8 @@ header {
 .btn {
     @include flexcenter;
     margin: 9% 6% 6%;
-    width: 67%;
-    height: 13.5vw;
+    width: 226px;
+    height: 3.15rem;
     border-radius: 25px;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     box-shadow: $box-shadow;
@@ -152,7 +150,7 @@ main {
             position: relative;
             @include flexcenter;
             width: 45%;
-            height: ($ville-hgt)-($gradient-hgt);
+            line-height: 2.5rem;
             margin: auto;
             font-weight: 700;
             i {
@@ -421,7 +419,7 @@ main {
                 font-weight: bold;
             }
             i {
-                margin-right: 2vw;
+                margin-right: 0.47rem;
             }
             a {
                 color: $footer-text;

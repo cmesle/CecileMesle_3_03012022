@@ -54,7 +54,7 @@ a {
   }
   100% {
     opacity: 1;
-    transform: translateX(-24vw);
+    transform: translateX(-145%);
   }
 }
 @keyframes fadein--2 {
@@ -67,20 +67,20 @@ a {
   }
   100% {
     opacity: 1;
-    transform: translateX(-5vw);
+    transform: translateX(-25%);
   }
 }
 @keyframes fadein--3 {
   0% {
     opacity: 0;
-    transform: translateX(5vw);
+    transform: translateX(15%);
   }
   50% {
     opacity: 0.2;
   }
   100% {
     opacity: 1;
-    transform: translateX(20vw);
+    transform: translateX(70%);
   }
 }
 @keyframes scale--4 {
@@ -196,7 +196,7 @@ body {
 }
 
 .loader {
-  position: relative;
+  position: absolute;
   z-index: 1001;
   display: flex;
   justify-content: center;
@@ -204,6 +204,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: white;
+  animation: fade-out 1s 5.1s forwards;
 }
 .loader .spinner {
   position: relative;
@@ -246,19 +247,6 @@ body {
   align-items: center;
   width: 70%;
   height: 70%;
-  transform: rotate(-40deg);
-  position: absolute;
-  border-radius: 50%;
-  border: solid 2px #9356DC;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  animation: rotate 2s alternate infinite;
-}
-.loader .spinner__plate--2::after {
-  position: absolute;
-  content: "";
-  width: 90%;
-  height: 90%;
   transform: rotate(-55deg);
   position: absolute;
   border-radius: 50%;
@@ -267,35 +255,47 @@ body {
   border-right-color: transparent;
   animation: rotate 20s alternate infinite;
 }
-.loader .loader__txt {
+.loader .spinner__plate--2::before {
   position: absolute;
+  content: "";
+  width: 90%;
+  height: 90%;
+  transform: rotate(-40deg);
+  position: absolute;
+  border-radius: 50%;
+  border: solid 2px #9356DC;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s alternate infinite;
+}
+.loader .spinner .loader__txt {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Shrikhand";
 }
-.loader .loader__txt--1 {
+.loader .spinner .loader__txt--1 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
   animation: fadein--1 3s 0.6s;
 }
-.loader .loader__txt--2 {
+.loader .spinner .loader__txt--2 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
   animation: fadein--2 3s 0.6s;
 }
-.loader .loader__txt--3 {
+.loader .spinner .loader__txt--3 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
   animation: fadein--3 3s 0.6s;
 }
-.loader .loader__txt--4 {
+.loader .spinner .loader__txt--4 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
@@ -329,8 +329,8 @@ header #logo img {
   justify-content: center;
   align-items: center;
   margin: 9% 6% 6%;
-  width: 67%;
-  height: 13.5vw;
+  width: 226px;
+  height: 3.15rem;
   border-radius: 25px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0 1vw 5vw #d7d7d7;
@@ -357,7 +357,7 @@ main .ville {
   background-color: #eaeaea;
 }
 main .ville__gradient {
-  height: 1.5vw;
+  height: 0.35rem;
   background: linear-gradient(#d1d1d1, #eaeaea);
 }
 main .ville__info {
@@ -366,7 +366,7 @@ main .ville__info {
   justify-content: center;
   align-items: center;
   width: 45%;
-  height: 11.5vw;
+  line-height: 2.5rem;
   margin: auto;
   font-weight: 700;
 }
@@ -705,7 +705,7 @@ footer .footer__menu li:not(:nth-last-child(-n+2)) {
   font-weight: bold;
 }
 footer .footer__menu i {
-  margin-right: 2vw;
+  margin-right: 0.47rem;
 }
 footer .footer__menu a {
   color: white;
@@ -714,16 +714,14 @@ footer .footer__menu a {
 @media screen and (min-width: 992px) {
   .btn {
     line-height: 2rem;
+    margin: 3%;
   }
 
   .loader .spinner {
-    width: 20vw;
-    height: 20vw;
+    width: 9.5rem;
+    height: 9.5rem;
   }
-  .loader .spinner__plate {
-    width: 40vw;
-    height: 40vw;
-  }
+
   header {
     padding: 3% 0 1%;
   }
@@ -731,23 +729,37 @@ footer .footer__menu a {
     width: 20%;
   }
 
+  main h1 {
+    margin-bottom: 1.4rem;
+  }
   main .loca .ville {
     height: unset;
     line-height: 2rem;
   }
+  main .loca .ville__info {
+    width: 20%;
+  }
   main .loca .explorer {
+    flex-direction: row;
+    justify-content: space-around;
     padding: 0 5%;
   }
   main .loca .explorer .baseline {
     width: 60%;
+    padding-top: unset;
   }
   main .fctt {
     display: flex;
     flex-wrap: wrap;
-    width: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5vw;
+  }
+  main .fctt h1 {
+    margin-bottom: 1.4rem;
   }
   main .fctt__etape {
-    width: 100%;
+    width: 25%;
   }
   main .fctt__etape__nb {
     width: 1.5rem;
@@ -762,12 +774,21 @@ footer .footer__menu a {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding: 5vw;
   }
   main .restaurants h1 {
     width: 100%;
   }
   main .restaurants .card {
     width: 20%;
+  }
+
+  footer {
+    padding: 5vw;
+    text-align: right;
+  }
+  footer .footer__menu {
+    margin-bottom: 0;
   }
 }
 

@@ -121,12 +121,12 @@ header {
     height: 3.15rem;
     border-radius: 25px;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    box-shadow: $box-shadow;
+    @include box-shadow(20%);
     font-weight: 500;
     color: white;
     cursor: pointer;
     &:hover {
-        box-shadow: $box-shadow--hover;
+        @include box-shadow--hover(25%);
         background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));;
     }
 }
@@ -191,13 +191,14 @@ main {
             display: flex;
             align-items: center;
             width: 84vw;
-            line-height: 5rem;
+            height: 4.5rem;
             left: 3vw;
             margin-bottom: 1.4rem;
             border-radius: 20px;
             background-color: $color-fond;
-            box-shadow: $box-shadow;
-            color: darken($color-fond, 50%);;
+            //box-shadow: $box-shadow;
+            @include box-shadow(12%);
+
             font-weight: 700;
             transition: background-color 400ms, color 400ms 150ms;
             &:hover {
@@ -217,6 +218,7 @@ main {
             }
             i {
                 margin: 0 5vw 0 7vw;
+                color: darken($color-fond, 50%);
             }
             &__txt {
                 width: 100%;
@@ -240,7 +242,7 @@ main {
                     font-weight: 800;
                 }
                 &__loc {
-                    margin-top: 1vw;
+                    margin-top: 0.235rem;
                     font-weight: 300;
                 }
             }

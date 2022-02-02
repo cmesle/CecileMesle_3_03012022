@@ -9,6 +9,8 @@ $gradient-hgt: 0.35rem;
 // $box-shadow--hover: 0 0.35rem 0.47rem darken($color-fond, 20%);
 $etape-hgt : 20vw;
 
-$prix_right: 6vw;
+$prix_right_mob: 6vw;
+$prix_right_dsk: 1.5vw;
 $selec_width: 20%;
-$prix_right2: calc($prix_right + $selec_width);
+$prix_right_mob2: calc($prix_right_mob + $selec_width);
+$prix_right_dsk2: calc($prix_right_dsk + $selec_width);

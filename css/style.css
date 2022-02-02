@@ -188,6 +188,11 @@ a {
   100% {
     right: calc(6vw + 20%);
   }
+  @media screen and (min-width: 992px) {
+    100% {
+      right: calc(1.5vw + 20%);
+    }
+  }
 }
 /*SPINNER */
 /* COEUR */
@@ -599,9 +604,9 @@ main .restaurants .card__new {
   font-weight: normal;
 }
 .menu .cat h2 .h2__style {
-  width: 11vw;
-  height: 0.9vw;
-  margin: 1.7vw 0 4vw;
+  width: 2.5rem;
+  height: 0.21rem;
+  margin: 0.4rem 0 0.94rem;
   background-color: #99E2D0;
 }
 .menu .cat .card {
@@ -765,6 +770,7 @@ footer .footer__menu a {
   }
   main .fctt__etape {
     width: 25%;
+    padding-right: 1rem;
   }
   main .fctt__etape__nb {
     width: 1.5rem;
@@ -778,6 +784,7 @@ footer .footer__menu a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 1rem;
     width: 100%;
     padding: 5vw;
   }
@@ -787,13 +794,58 @@ footer .footer__menu a {
   main .restaurants .card {
     width: 20%;
     min-width: 250px;
-    margin-left: 1rem;
-  }
-  main .restaurants .card:nth-child(2) {
-    margin-left: 0;
+    margin-bottom: unset;
   }
   main .restaurants .card__info {
     padding: 1rem;
+  }
+
+  MAIN .resto__header {
+    width: 25%;
+    height: 10rem;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  MAIN .resto__header img {
+    transform: translateY(-3rem);
+  }
+  MAIN .menu {
+    background-color: unset;
+    top: -2rem;
+  }
+  MAIN .menu .menu__header {
+    justify-content: center;
+  }
+  MAIN .menu .menu__header h1 {
+    margin-top: 0;
+    text-align: center;
+  }
+  MAIN #cat__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  MAIN #cat__container .cat {
+    gap: 1rem;
+    width: 30%;
+  }
+  MAIN #cat__container .cat .h2__style {
+    margin-bottom: unset;
+  }
+  MAIN #cat__container .cat .card {
+    margin-bottom: unset;
+    padding: 1rem;
+  }
+  MAIN #cat__container .cat .card:hover > .card__prix {
+    right: calc(1.5vw + 20%);
+  }
+  MAIN #cat__container .cat .card__detail {
+    padding-top: 0.26rem;
+  }
+  MAIN #cat__container .cat .card__prix {
+    right: 1.5rem;
+    padding-bottom: 0.9rem;
   }
 
   footer {

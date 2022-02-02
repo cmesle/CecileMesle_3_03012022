@@ -327,9 +327,9 @@ main {
                 font-size: 100%;
                 font-weight: normal;
                 .h2__style {
-                    width: 11vw;
-                    height: 0.9vw; 
-                    margin: 1.7vw 0 4vw;
+                    width: 2.5rem;
+                    height: 0.21rem; 
+                    margin: 0.4rem 0 0.94rem;
                     background-color: $color-tertiary;
                 }
             }
@@ -353,7 +353,7 @@ main {
                     animation: platselec_selec_i $selec-dur ease-in-out forwards;
                 }
                 &:hover > .card__prix {
-                    right: $prix_right2;
+                    right: $prix_right_mob2;
                 }
 
                 &__info {

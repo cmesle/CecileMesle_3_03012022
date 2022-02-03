@@ -111,6 +111,10 @@ $fadein-dur: 3s;
 }
 
 /* APPARITION DES PLATS */
+@keyframes ghost-top {
+    from {top: 0;}
+    to {top: 100%;}
+}
 $cardappear-dur: 1s;
 @keyframes cardappeark {
     0% {

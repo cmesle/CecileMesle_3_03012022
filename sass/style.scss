@@ -24,7 +24,7 @@ body {
     width:100vw;
     height:100vh;
     background-color: rgba(255,255,255,1);
-   animation: fade-out 1s $fadein-dur*1.7 forwards;
+   animation: fade-out 1s $fadein-dur*1.5 forwards;
 
     .spinner {
         position: relative;
@@ -73,15 +73,15 @@ body {
             font-family: $font-titre;
             &--1 {
                 @include loader__txt;
-                animation: fadein--1 $fadein-dur $fadein-dur*0.2;
+                animation: fadein--1 $fadein-dur $fadein-dur*0.15;
             }
             &--2 {
                 @include loader__txt;
-                animation: fadein--2 $fadein-dur $fadein-dur*0.2;
+                animation: fadein--2 $fadein-dur $fadein-dur*0.15;
             }
             &--3 {
                 @include loader__txt;
-                animation: fadein--3 $fadein-dur $fadein-dur*0.2 ;
+                animation: fadein--3 $fadein-dur $fadein-dur*0.15;
             }
     
             &--4 {
@@ -340,8 +340,8 @@ main {
                 padding: 3vw;
                 opacity: 0;
                 cursor: pointer;
-                &:nth-child(2) {@include cardappear($cardappear-dur);}
-                &:nth-child(3) {@include cardappear(4);}
+                &:nth-child(3) {@include cardappear($cardappear-dur);}
+                &:nth-child(4) {@include cardappear(4);}
                 &:last-child {@include cardappear(2);}
                 &:hover > .card__info {
                     width: 63%;

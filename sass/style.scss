@@ -203,6 +203,8 @@ main {
             transition: background-color 400ms, color 400ms 150ms;
             &:hover {
                 background-color: lighten($color-primary, 35%);
+            }
+            &:hover > i {
                 color: $color-primary;
             }
             &__nb {

@@ -430,6 +430,8 @@ main .fctt__etape {
 }
 main .fctt__etape:hover {
   background-color: #f2eafb;
+}
+main .fctt__etape:hover > i {
   color: #9356DC;
 }
 main .fctt__etape__nb {
@@ -763,6 +765,10 @@ footer .footer__menu a {
   main .loca .explorer .baseline {
     width: 60%;
     padding-top: unset;
+  }
+  main .loca .explorer .baseline h1 {
+    padding: unset;
+    line-height: 2.5rem;
   }
   main .fctt {
     display: flex;

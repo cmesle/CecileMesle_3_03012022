@@ -335,6 +335,9 @@ main {
                     background-color: $color-tertiary;
                 }
             }
+            @for $i from 1 through 9 {
+                .card--#{$i} {@include cardappear(calc(10 / $i));}
+            }
             .card {
                 @include card;
                 width: 102%;
@@ -342,9 +345,9 @@ main {
                 padding: 3vw;
                 opacity: 0;
                 cursor: pointer;
-                &:nth-child(3) {@include cardappear($cardappear-dur);}
-                &:nth-child(4) {@include cardappear(4);}
-                &:last-child {@include cardappear(2);}
+                // &:nth-child(3) {@include cardappear($cardappear-dur);}
+                // &:nth-child(4) {@include cardappear(4);}
+                // &:last-child {@include cardappear(2);}
                 &:hover > .card__info {
                     width: 63%;
                 }

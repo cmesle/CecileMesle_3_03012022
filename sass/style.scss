@@ -362,7 +362,7 @@ main {
                 }
 
                 &__info {
-                    width: 100%;
+                    width: 80%;
                     white-space: nowrap;
                     transition: width $selec-dur ease-in-out;
                 }
@@ -437,3 +437,4 @@ main {
     }
 
     @import "desktop";
+    @import "tablet";

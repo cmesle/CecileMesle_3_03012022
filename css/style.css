@@ -667,7 +667,7 @@ main .restaurants .card__new {
   right: calc(6vw + 20%);
 }
 .menu .cat .card__info {
-  width: 100%;
+  width: 80%;
   white-space: nowrap;
   transition: width 700ms ease-in-out;
 }
@@ -831,21 +831,22 @@ footer .footer__menu a {
 
   MAIN .resto__header {
     width: 25%;
-    height: 10rem;
+    height: 14vw;
     margin: auto;
     overflow: hidden;
     border-radius: 25px;
   }
   MAIN .resto__header img {
-    transform: translateY(-3rem);
+    transform: translateY(-1rem);
   }
   MAIN .menu {
     background-color: unset;
     top: -2rem;
   }
   MAIN .menu .menu__header {
-    width: 20%;
+    width: 25%;
     margin: auto;
+    padding-top: 1rem;
     padding-right: 1rem;
   }
   MAIN .menu .menu__header h1 {
@@ -877,6 +878,178 @@ footer .footer__menu a {
   MAIN #cat__container .cat .card {
     margin-bottom: unset;
     padding: 1rem;
+  }
+  MAIN #cat__container .cat .card:hover > .card__prix {
+    right: calc(1.5vw + 20%);
+  }
+  MAIN #cat__container .cat .card__detail {
+    padding-top: 0.26rem;
+  }
+  MAIN #cat__container .cat .card__prix {
+    right: 1.5rem;
+    padding-bottom: 0.9rem;
+  }
+  MAIN #cat__container .cat .card__selec {
+    font-size: 150%;
+  }
+
+  footer {
+    padding: 5vw;
+    text-align: right;
+  }
+  footer .footer__menu {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  body {
+    font-size: 90%;
+  }
+
+  .btn {
+    line-height: 2rem;
+    margin: 3%;
+  }
+
+  .loader .spinner {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+
+  header {
+    padding: 4% 0 2%;
+  }
+  header .home {
+    font-size: 150%;
+  }
+  header #logo {
+    width: 18%;
+  }
+
+  main h1 {
+    margin-bottom: 1.4rem;
+  }
+  main .loca .ville {
+    height: unset;
+    line-height: 2rem;
+  }
+  main .loca .ville__info {
+    width: 18%;
+  }
+  main .loca .explorer {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 5%;
+  }
+  main .loca .explorer .baseline {
+    width: 60%;
+    padding-top: unset;
+  }
+  main .loca .explorer .baseline h1 {
+    padding: unset;
+    line-height: 2.5rem;
+  }
+  main .fctt {
+    display: flex;
+    align-items: baseline;
+    padding: 5vw;
+  }
+  main .fctt h1 {
+    margin-bottom: unset;
+  }
+  main .fctt .fctt__cont {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .fctt__etape {
+    width: 25%;
+    margin-bottom: unset;
+    padding-right: 1rem;
+  }
+  main .fctt__etape__nb {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: -0.75rem;
+  }
+  main .fctt__etape i {
+    margin: 0 1.125rem 0 1.875rem;
+  }
+  main .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 3vw 5vw;
+  }
+  main .restaurants h1 {
+    width: 100%;
+  }
+  main .restaurants .card {
+    width: 20%;
+    min-width: 250px;
+    margin-bottom: unset;
+  }
+  main .restaurants .card__info {
+    padding: 1rem;
+  }
+
+  MAIN .resto__header {
+    width: 30%;
+    height: 14vw;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  MAIN .resto__header img {
+    transform: translateY(-1rem);
+  }
+  MAIN .menu {
+    background-color: unset;
+    top: -2rem;
+  }
+  MAIN .menu .menu__header {
+    width: 30%;
+    margin: auto;
+    padding: 1rem 1rem 0 0;
+  }
+  MAIN .menu .menu__header h1 {
+    margin: 0;
+  }
+  MAIN .menu .menu__header .heart {
+    position: unset;
+  }
+  MAIN .menu .btn {
+    margin: auto;
+  }
+  MAIN #cat__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  MAIN #cat__container .cat {
+    position: relative;
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    background-color: #f6f6f6;
+  }
+  MAIN #cat__container .cat .h2__style {
+    margin-bottom: unset;
+  }
+  MAIN #cat__container .cat .card {
+    width: 32%;
+    margin-bottom: unset;
+    padding: 1rem;
+    font-size: 100%;
   }
   MAIN #cat__container .cat .card:hover > .card__prix {
     right: calc(1.5vw + 20%);

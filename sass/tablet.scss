@@ -1,4 +1,7 @@
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 769px) and (max-width:1023px) {
+    body {
+        font-size: 90%;
+    }
     .btn {
         line-height: 2rem;
         margin: 3%;
@@ -101,7 +104,7 @@
     //RESTAURANTS
     MAIN {
         .resto__header {
-            width: 25%;
+            width: 30%;
             height: 14vw;
             margin: auto;
             overflow: hidden;
@@ -114,10 +117,9 @@
             background-color: unset;
             top: -2rem;
             .menu__header {
-                width: 25%;
+                width: 30%;
                 margin: auto;
-                padding-top: 1rem;
-                padding-right: 1rem;
+                padding: 1rem 1rem 0 0;
                 h1 {
                     margin: 0;
                 }
@@ -131,22 +133,27 @@
         }
         #cat__container {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             gap: 2rem;
+            padding: 2rem 0;
             .cat {
                 position: relative;
+                flex-flow: row wrap;
                 gap: 1rem;
-                width: 30%;
-                margin: 5vw auto 5vw;
-                padding: 1rem;
+                width: 100%;
+                margin: 0;
+                padding: 0.8rem;
                 border-radius: 1rem;
                 background-color: $color-fond;
                 .h2__style {
                     margin-bottom: unset;
                 }
                 .card {
+                    width: 32%;
                     margin-bottom: unset;
                     padding: 1rem;
+                    font-size: 100%;
                     &:hover > .card__prix {
                         right: $prix_right_dsk2;
                     }

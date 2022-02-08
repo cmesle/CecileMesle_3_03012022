@@ -712,6 +712,7 @@ main .restaurants .card__new {
 .menu .btn {
   margin: 10vw auto 20vw;
   width: 53%;
+  max-width: 226px;
 }
 
 footer {

@@ -145,14 +145,6 @@ a {
   }
 }
 /* APPARITION DES PLATS */
-@keyframes ghost-top {
-  from {
-    top: 0;
-  }
-  to {
-    top: 100%;
-  }
-}
 @keyframes cardappeark {
   0% {
     transform: translateY(1.5vw);

@@ -737,7 +737,7 @@ footer .footer__menu a {
   color: white;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .btn {
     line-height: 2rem;
     margin: 3%;
@@ -854,6 +854,9 @@ footer .footer__menu a {
   MAIN .menu .menu__header .heart {
     position: unset;
   }
+  MAIN .menu .btn {
+    margin: auto;
+  }
   MAIN #cat__container {
     display: flex;
     justify-content: space-between;
@@ -863,6 +866,7 @@ footer .footer__menu a {
     position: relative;
     gap: 1rem;
     width: 30%;
+    margin: 5vw auto 5vw;
     padding: 1rem;
     border-radius: 1rem;
     background-color: #f6f6f6;

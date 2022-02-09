@@ -1010,9 +1010,11 @@ footer .footer__menu a {
   MAIN .menu {
     background-color: unset;
     top: -2rem;
+    padding: 2.5vw 3vw;
   }
   MAIN .menu .menu__header {
-    width: 30%;
+    justify-content: space-around;
+    width: 35%;
     margin: auto;
     padding: 1rem 1rem 0 0;
   }
@@ -1035,6 +1037,7 @@ footer .footer__menu a {
   MAIN #cat__container .cat {
     position: relative;
     flex-flow: row wrap;
+    justify-content: space-between;
     gap: 1rem;
     width: 100%;
     margin: 0;
@@ -1046,23 +1049,29 @@ footer .footer__menu a {
     margin-bottom: unset;
   }
   MAIN #cat__container .cat .card {
-    width: 32%;
+    width: 31.5%;
     margin-bottom: unset;
-    padding: 1rem;
+    padding: 0.7rem 0.8rem;
     font-size: 100%;
   }
   MAIN #cat__container .cat .card:hover > .card__prix {
     right: calc(1.5vw + 20%);
   }
+  MAIN #cat__container .cat .card:hover > .card__selec {
+    right: 0;
+  }
   MAIN #cat__container .cat .card__detail {
     padding-top: 0.26rem;
   }
   MAIN #cat__container .cat .card__prix {
-    right: 1.5rem;
-    padding-bottom: 0.9rem;
+    right: 1rem;
+    padding-bottom: 0.6rem;
   }
   MAIN #cat__container .cat .card__selec {
+    width: 22%;
+    right: -22%;
     font-size: 150%;
+    transition: right 700ms ease-in-out;
   }
 
   footer {

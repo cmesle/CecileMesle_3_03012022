@@ -209,7 +209,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  animation: fade-out 1s 4.5s forwards;
+  animation: fade-out 1s 3s forwards;
 }
 .loader .spinner {
   position: relative;
@@ -284,21 +284,21 @@ body {
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
-  animation: fadein--1 3s 0.45s;
+  animation: fadein--1 2s 0.3s;
 }
 .loader .spinner .loader__txt--2 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
-  animation: fadein--2 3s 0.45s;
+  animation: fadein--2 2s 0.3s;
 }
 .loader .spinner .loader__txt--3 {
   position: absolute;
   font-family: "Shrikhand";
   font-size: 290%;
   opacity: 0;
-  animation: fadein--3 3s 0.45s;
+  animation: fadein--3 2s 0.3s;
 }
 .loader .spinner .loader__txt--4 {
   position: absolute;
@@ -306,7 +306,7 @@ body {
   font-size: 290%;
   opacity: 0;
   font-size: 295%;
-  animation: scale--4 3s 3s forwards;
+  animation: scale--4 2s 2s forwards;
 }
 
 header {

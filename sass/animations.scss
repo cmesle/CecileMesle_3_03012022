@@ -5,7 +5,7 @@ $rotate-dur: 2s;
     to {transform: rotate(360deg);}
 }
 
-$fadein-dur: 3s;
+$fadein-dur: 2s;
 @keyframes fadein--1 {
     0% {
         opacity: 0;

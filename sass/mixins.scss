@@ -31,9 +31,13 @@
 @mixin heart {
     @include flexcenter;
     position: absolute;
-    bottom: 3rem;
-    right: 2.5rem;
+    bottom: 4vw;
+    @media screen and (min-width:769px) {
+        bottom: 1rem;
+    }
+    right: 1.5rem;
     z-index: 10;
+    padding-bottom: 1rem;
     &:hover > .heart__empty {
         animation: heartfade 400ms ease-in-out forwards;
     }
@@ -42,7 +46,7 @@
     }
 }
 @mixin heart__empty {
-    position: absolute;
+    // position: absolute;
     background: linear-gradient(to top right, $color-secondary, $color-primary);
     background-clip: text; -webkit-background-clip: text;
     color: black;
@@ -52,7 +56,6 @@
     position: absolute;
     background: linear-gradient(to top right, $color-secondary, $color-primary);
     opacity: 0;
-    transform-origin: 50% 50%;
     background-clip: text; -webkit-background-clip: text;
     color: transparent;
     cursor: pointer;

@@ -482,10 +482,16 @@ main .restaurants .card .heart {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 3rem;
-  right: 2.5rem;
+  bottom: 4vw;
+  right: 1.5rem;
   z-index: 10;
+  padding-bottom: 1rem;
   font-size: 140%;
+}
+@media screen and (min-width: 769px) {
+  main .restaurants .card .heart {
+    bottom: 1rem;
+  }
 }
 main .restaurants .card .heart:hover > .heart__empty {
   animation: heartfade 400ms ease-in-out forwards;
@@ -494,7 +500,6 @@ main .restaurants .card .heart:hover > .heart__full {
   animation: heartfill 400ms ease-out forwards;
 }
 main .restaurants .card .heart__empty {
-  position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -505,7 +510,6 @@ main .restaurants .card .heart__full {
   position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
-  transform-origin: 50% 50%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -552,6 +556,7 @@ main .restaurants .card__new {
 .menu .menu__header h1 {
   font-family: "Shrikhand";
   font-size: 170%;
+  font-weight: unset;
   margin-top: 6vw;
 }
 .menu .menu__header .heart {
@@ -559,12 +564,19 @@ main .restaurants .card__new {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 3rem;
-  right: 2.5rem;
+  bottom: 4vw;
+  right: 1.5rem;
   z-index: 10;
+  padding-bottom: 1rem;
   bottom: unset;
   right: 8vw;
+  padding-bottom: unset;
   font-size: 150%;
+}
+@media screen and (min-width: 769px) {
+  .menu .menu__header .heart {
+    bottom: 1rem;
+  }
 }
 .menu .menu__header .heart:hover > .heart__empty {
   animation: heartfade 400ms ease-in-out forwards;
@@ -573,7 +585,6 @@ main .restaurants .card__new {
   animation: heartfill 400ms ease-out forwards;
 }
 .menu .menu__header .heart__empty {
-  position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -584,7 +595,6 @@ main .restaurants .card__new {
   position: absolute;
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
-  transform-origin: 50% 50%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -605,6 +615,7 @@ main .restaurants .card__new {
   font-weight: normal;
 }
 .menu .cat h2 .h2__style {
+  display: block;
   width: 2.5rem;
   height: 0.21rem;
   margin: 0.4rem 0 0.94rem;
@@ -840,16 +851,16 @@ footer .footer__menu a {
   }
   MAIN .menu {
     background-color: unset;
-    top: -2rem;
+    padding: 0 5vw 5vw;
   }
   MAIN .menu .menu__header {
-    width: 25%;
+    justify-content: center;
     margin: auto;
-    padding-top: 1rem;
+    padding-top: 1.5vw;
     padding-right: 1rem;
   }
   MAIN .menu .menu__header h1 {
-    margin: 0;
+    margin: 0 5vw 0 0;
   }
   MAIN .menu .menu__header .heart {
     position: unset;
@@ -866,7 +877,7 @@ footer .footer__menu a {
     position: relative;
     gap: 1rem;
     width: 30%;
-    margin: 5vw auto 5vw;
+    margin: 4vw 0 5vw;
     padding: 1rem;
     border-radius: 1rem;
     background-color: #f6f6f6;
@@ -900,7 +911,7 @@ footer .footer__menu a {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   body {
     font-size: 90%;
   }
@@ -950,11 +961,9 @@ footer .footer__menu a {
   }
   main .fctt {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     padding: 5vw;
-  }
-  main .fctt h1 {
-    margin-bottom: unset;
   }
   main .fctt .fctt__cont {
     display: flex;
@@ -985,34 +994,34 @@ footer .footer__menu a {
     padding: 3vw 5vw;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) and (max-width: 869px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) and (max-width: 869px) {
   main .restaurants {
     justify-content: space-evenly;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   main .restaurants h1 {
     width: 100%;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   main .restaurants .card {
     width: 20%;
     min-width: 250px;
     margin-bottom: unset;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) and (max-width: 869px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) and (max-width: 869px) {
   main .restaurants .card {
     margin-bottom: 2rem;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   main .restaurants .card__info {
     padding: 1rem;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   MAIN .resto__header {
     width: 30%;
     height: 14vw;
@@ -1025,17 +1034,17 @@ footer .footer__menu a {
   }
   MAIN .menu {
     background-color: unset;
-    top: -2rem;
-    padding: 2.5vw 3vw;
+    padding: 0 3vw 2rem;
   }
   MAIN .menu .menu__header {
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 35%;
     margin: auto;
     padding: 1rem 1rem 0 0;
   }
   MAIN .menu .menu__header h1 {
-    margin: 0;
+    margin: 0 1rem 0 0;
+    font-weight: unset;
   }
   MAIN .menu .menu__header .heart {
     position: unset;
@@ -1090,7 +1099,7 @@ footer .footer__menu a {
     transition: right 700ms ease-in-out;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
   footer {
     padding: 5vw;
     text-align: right;

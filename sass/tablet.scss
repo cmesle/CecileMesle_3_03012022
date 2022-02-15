@@ -1,4 +1,4 @@
-@media screen and (min-width: 770px) and (max-width:1023px) {
+@media screen and (min-width: 770px) and (max-width:1024px) {
     body {
         font-size: 90%;
     }
@@ -52,11 +52,12 @@
         }
         .fctt {
             display: flex;
+            flex-wrap: wrap;
             align-items: baseline;
             padding: 5vw;
             h1 {
 //                width: 100%;
-                margin-bottom: unset;
+                // margin-bottom: unset;
             }
             .fctt__cont {
                 display: flex;
@@ -121,15 +122,15 @@
         }
         .menu {
             background-color: unset;
-            top: -2rem;
-            padding: 2.5vw 3vw;
+            padding: 0 3vw 2rem;
             .menu__header {
-                justify-content: space-around;
+                justify-content: space-evenly;
                 width: 35%;
                 margin: auto;
                 padding: 1rem 1rem 0 0;
                 h1 {
-                    margin: 0;
+                    margin: 0 1rem 0 0;
+                    font-weight: unset;
                 }
                 .heart {
                     position: unset;

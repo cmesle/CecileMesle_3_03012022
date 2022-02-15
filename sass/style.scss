@@ -300,12 +300,14 @@ main {
             h1 {
                 font-family: $font-titre;
                 font-size: 170%;
+                font-weight: unset;
                 margin-top: 6vw;
             }
             .heart {
                 @include heart;
                 bottom: unset;
                 right: 8vw;
+                padding-bottom: unset;
                 font-size: 150%;
                 &__empty {
                     @include heart__empty;
@@ -329,6 +331,7 @@ main {
                 font-size: 100%;
                 font-weight: normal;
                 .h2__style {
+                    display: block;
                     width: 2.5rem;
                     height: 0.21rem; 
                     margin: 0.4rem 0 0.94rem;

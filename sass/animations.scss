@@ -23,7 +23,6 @@ $fadein-dur: 2s;
 @keyframes fadein--2 {
     0% {
         opacity: 0;
-        transform: translateX();
     }
     30% {
         opacity: 0.2;
@@ -86,10 +85,12 @@ $fadein-dur: 2s;
     86% {
         color: black;
     }
-    99% {        scale: 1;}
+    99% {
+        transform: scale(1);
+    }
     100% {
         color: transparent;
-        scale: 0.9;
+        transform: scale(0.9);
     }
 }
 @keyframes heartfill {
@@ -163,14 +164,13 @@ $selec-dur: 700ms;
     
 }
 @keyframes platselec_prix {
-
-    0% {
-        
-    }
+    0% {    }
     100% {
         right: $prix_right_mob2;
     }
-    @media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 992px) {
+    @keyframes platselec_prix {
         0% {
         
         }

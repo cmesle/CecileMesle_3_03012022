@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Roboto", sans-serif;
-  font-family: "Shrikhand", cursive;
+  font-family: "Roboto";
+  font-family: "Shrikhand";
 }
 body {
   width: 100%;
@@ -60,7 +60,6 @@ a {
 @keyframes fadein--2 {
   0% {
     opacity: 0;
-    transform: translateX();
   }
   30% {
     opacity: 0.2;
@@ -121,11 +120,11 @@ a {
     color: black;
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
     color: transparent;
-    scale: 0.9;
+    transform: scale(0.9);
   }
 }
 @keyframes heartfill {
@@ -188,7 +187,9 @@ a {
   100% {
     right: calc(6vw + 20%);
   }
-  @media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 992px) {
+  @keyframes platselec_prix {
     100% {
       right: calc(1.5vw + 20%);
     }
@@ -206,7 +207,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: white;
   animation: fade-out 1s 3s forwards;
@@ -487,7 +488,6 @@ main .restaurants .card .heart {
   font-size: 140%;
 }
 main .restaurants .card .heart:hover > .heart__empty {
-  transform-origin: 50%, 50%;
   animation: heartfade 400ms ease-in-out forwards;
 }
 main .restaurants .card .heart:hover > .heart__full {
@@ -567,7 +567,6 @@ main .restaurants .card__new {
   font-size: 150%;
 }
 .menu .menu__header .heart:hover > .heart__empty {
-  transform-origin: 50%, 50%;
   animation: heartfade 400ms ease-in-out forwards;
 }
 .menu .menu__header .heart:hover > .heart__full {
@@ -901,7 +900,7 @@ footer .footer__menu a {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   body {
     font-size: 90%;
   }
@@ -985,18 +984,35 @@ footer .footer__menu a {
     width: 100%;
     padding: 3vw 5vw;
   }
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) and (max-width: 869px) {
+  main .restaurants {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   main .restaurants h1 {
     width: 100%;
   }
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   main .restaurants .card {
     width: 20%;
     min-width: 250px;
     margin-bottom: unset;
   }
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) and (max-width: 869px) {
+  main .restaurants .card {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   main .restaurants .card__info {
     padding: 1rem;
   }
-
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   MAIN .resto__header {
     width: 30%;
     height: 14vw;
@@ -1073,7 +1089,8 @@ footer .footer__menu a {
     font-size: 150%;
     transition: right 700ms ease-in-out;
   }
-
+}
+@media screen and (min-width: 770px) and (max-width: 1023px) {
   footer {
     padding: 5vw;
     text-align: right;

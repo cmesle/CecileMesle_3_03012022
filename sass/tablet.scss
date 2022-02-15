@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px) and (max-width:1023px) {
+@media screen and (min-width: 770px) and (max-width:1023px) {
     body {
         font-size: 90%;
     }
@@ -87,6 +87,9 @@
             gap: 1rem;
             width: 100%;
             padding: 3vw 5vw;
+            @media screen and (max-width:869px) {
+                justify-content: space-evenly;
+            }
             h1 {
                 width: 100%;
             }
@@ -94,6 +97,9 @@
                 width: 20%;
                 min-width: 250px;
                 margin-bottom: unset;
+                @media screen and (max-width:869px) {
+                    margin-bottom: 2rem;
+                }
                 &__info {
                     padding: 1rem;
                 }

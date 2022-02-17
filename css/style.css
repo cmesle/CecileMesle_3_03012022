@@ -162,37 +162,26 @@ a {
   }
 }
 /* SELECTION D'UN PLAT */
-@keyframes platselec_txtshrink {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-@keyframes platselec_selec {
-  100% {
-    right: 0;
-  }
-}
 @keyframes platselec_selec_i {
   40% {
     transform: rotate(90deg);
+  }
+  99% {
+    margin-left: 0;
   }
   100% {
     transform: rotate(-360deg);
   }
 }
 @keyframes platselec_prix {
-  100% {
-    right: calc(6vw + 20%);
+  0% {
+    right: 7%;
   }
-}
-@media screen and (min-width: 992px) {
-  @keyframes platselec_prix {
-    100% {
-      right: calc(1.5vw + 20%);
-    }
+  10% {
+    right: 7%;
+  }
+  100% {
+    right: 23%;
   }
 }
 /*SPINNER */
@@ -483,7 +472,7 @@ main .restaurants .card .heart {
   align-items: center;
   position: absolute;
   bottom: 4vw;
-  right: 1.5rem;
+  right: 1rem;
   z-index: 10;
   padding-bottom: 1rem;
   font-size: 140%;
@@ -502,7 +491,6 @@ main .restaurants .card .heart:hover > .heart__full {
 main .restaurants .card .heart__empty {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: black;
   cursor: pointer;
 }
@@ -511,7 +499,6 @@ main .restaurants .card .heart__full {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
@@ -565,11 +552,10 @@ main .restaurants .card__new {
   align-items: center;
   position: absolute;
   bottom: 4vw;
-  right: 1.5rem;
+  right: 1rem;
   z-index: 10;
   padding-bottom: 1rem;
   bottom: unset;
-  right: 8vw;
   padding-bottom: unset;
   font-size: 150%;
 }
@@ -587,7 +573,6 @@ main .restaurants .card__new {
 .menu .menu__header .heart__empty {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: black;
   cursor: pointer;
 }
@@ -596,7 +581,6 @@ main .restaurants .card__new {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
@@ -671,10 +655,10 @@ main .restaurants .card__new {
   right: 0;
 }
 .menu .cat .card:hover > .card__selec i {
-  animation: platselec_selec_i 700ms ease-in-out forwards;
+  animation: platselec_selec_i 700ms 560ms ease-in-out forwards;
 }
 .menu .cat .card:hover > .card__prix {
-  right: calc(6vw + 20%);
+  right: 23%;
 }
 .menu .cat .card__info {
   width: 80%;
@@ -699,11 +683,11 @@ main .restaurants .card__new {
   align-items: end;
   height: 100%;
   top: 0;
-  right: 6vw;
+  right: 7%;
   padding-bottom: 3vw;
   font-size: 0.9rem;
   font-weight: 800;
-  transition: right 700ms ease-in-out;
+  transition: right 560ms 120ms ease-in-out;
 }
 .menu .cat .card__selec {
   display: flex;
@@ -719,6 +703,10 @@ main .restaurants .card__new {
   font-size: 135%;
   transition: right 700ms ease-in-out;
 }
+.menu .cat .card__selec i {
+  transform: rotate(90deg);
+  margin-left: -30%;
+}
 .menu .btn {
   margin: 10vw auto 20vw;
   width: 53%;
@@ -730,7 +718,7 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer h1 {
+footer #footer_titre {
   font-family: "Shrikhand";
 }
 footer .footer__menu {

@@ -196,9 +196,7 @@ main {
             margin-bottom: 1.4rem;
             border-radius: 20px;
             background-color: $color-fond;
-            //box-shadow: $box-shadow;
             @include box-shadow(12%);
-
             font-weight: 700;
             transition: background-color 400ms, color 400ms 150ms;
             &:hover {
@@ -306,7 +304,6 @@ main {
             .heart {
                 @include heart;
                 bottom: unset;
-                right: 8vw;
                 padding-bottom: unset;
                 font-size: 150%;
                 &__empty {
@@ -348,9 +345,6 @@ main {
                 padding: 3vw;
                 opacity: 0;
                 cursor: pointer;
-                // &:nth-child(3) {@include cardappear($cardappear-dur);}
-                // &:nth-child(4) {@include cardappear(4);}
-                // &:last-child {@include cardappear(2);}
                 &:hover > .card__info {
                     width: 63%;
                 }
@@ -358,7 +352,7 @@ main {
                     right: 0;
                 }
                 &:hover > .card__selec i {
-                    animation: platselec_selec_i $selec-dur ease-in-out forwards;
+                    animation: platselec_selec_i $selec-dur calc($selec-dur * 0.8) ease-in-out forwards;
                 }
                 &:hover > .card__prix {
                     right: $prix_right_mob2;
@@ -387,11 +381,12 @@ main {
                     align-items: end;
                     height: 100%;
                     top: 0;
-                    right: 6vw;
+                    right: 7%;
                     padding-bottom: 3vw;
                     font-size: 0.9rem;
                     font-weight: 800;
-                    transition: right $selec-dur ease-in-out;
+                    // animation: platselec_prix calc($selec-dur * 0.8) 80ms;
+                    transition: right calc($selec-dur * 0.8) 120ms ease-in-out;
                 }
                 &__selec {
                     display: flex;
@@ -406,6 +401,10 @@ main {
                     color: white;
                     font-size: 135%;
                     transition: right $selec-dur ease-in-out;
+                    & i {
+                        transform: rotate(90deg);
+                        margin-left: -30%;
+                    }
                 }
             }
         }
@@ -421,7 +420,7 @@ main {
         padding: 7vw;
         background-color: $footer-bg;
         color: $footer-text;
-        h1 {
+        #footer_titre {
             font-family: $font-titre;
         }
         .footer__menu {

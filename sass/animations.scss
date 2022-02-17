@@ -134,48 +134,53 @@ $cardappear-dur: 1s;
 
 /* SELECTION D'UN PLAT */
 $selec-dur: 700ms;
-@keyframes platselec_txtshrink {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 80%;
-    }
-}
+// @keyframes platselec_txtshrink {
+//     0% {
+//         width: 100%;
+//     }
+//     100% {
+//         width: 80%;
+//     }
+// }
 
-@keyframes platselec_selec {
-    0% {
+// @keyframes platselec_selec {
+//     0% {
 
-    }
-    100% {
-        right: 0;
-    }
+//     }
+//     100% {
+//         right: 0;
+//     }
     
-}
+// }
 @keyframes platselec_selec_i {
     0% {
     }
     40% {
         transform: rotate(90deg);
     }
+    99% {        margin-left: 0;}
     100% {
         transform: rotate(-360deg);
+
     }
     
 }
 @keyframes platselec_prix {
-    0% {    }
+    0% {right: $prix_right_mob;    }
+    10% {
+        right: $prix_right_mob;
+    }
     100% {
         right: $prix_right_mob2;
     }
 }
-@media screen and (min-width: 992px) {
-    @keyframes platselec_prix {
-        0% {
+// @media screen and (min-width: 992px) {
+//     @keyframes platselec_prix {
+//         0% {
         
-        }
-        100% {
-            right: $prix_right_dsk2;
-        }
-    }
-}
+//         }
+//         100% {
+//             right: $prix_right_dsk2;
+//         }
+//     }
+// }

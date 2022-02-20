@@ -345,23 +345,28 @@ main {
                 padding: 3vw;
                 opacity: 0;
                 cursor: pointer;
+
                 &:hover > .card__info {
-                    width: 63%;
+                    width: 67%;
                 }
                 &:hover > .card__selec {
+                    // animation: platselec_selec $selec-dur forwards;
                     right: 0;
                 }
                 &:hover > .card__selec i {
-                    animation: platselec_selec_i $selec-dur calc($selec-dur * 0.8) ease-in-out forwards;
+                    animation: platselec_selec_i $selec-dur forwards;
                 }
                 &:hover > .card__prix {
-                    right: $prix_right_mob2;
+                    // animation: platselec_prix $selec-dur forwards;
+                    $selec_width: 20%;
+                    $prix_right_mob: 7%;
+                    right: calc($prix_right_mob + calc($selec_width * 0.8));
                 }
 
                 &__info {
                     width: 80%;
                     white-space: nowrap;
-                    transition: width $selec-dur ease-in-out;
+                    transition: width calc($selec-dur * 0.9) calc($selec-dur * 0.06) ease-in-out;
                 }
                 &__nom {
                     overflow: hidden;
@@ -385,8 +390,8 @@ main {
                     padding-bottom: 3vw;
                     font-size: 0.9rem;
                     font-weight: 800;
-                    // animation: platselec_prix calc($selec-dur * 0.8) 80ms;
-                    transition: right calc($selec-dur * 0.8) 120ms ease-in-out;
+                    // transition: right calc($selec-dur * 1) calc($selec-dur * 0.05) ease-in-out;
+                    transition: right calc($selec-dur * 0.95) calc($selec-dur * 0.06) ease-in-out;
                 }
                 &__selec {
                     display: flex;
@@ -400,9 +405,9 @@ main {
                     background-color: $color-tertiary;
                     color: white;
                     font-size: 135%;
-                    transition: right $selec-dur ease-in-out;
+                    transition: right $selec-dur cubic-bezier(.15,.35,0,-.35);
                     & i {
-                        transform: rotate(90deg);
+                        // transform: rotate(90deg);
                         margin-left: -30%;
                     }
                 }

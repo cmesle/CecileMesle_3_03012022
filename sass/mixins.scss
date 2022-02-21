@@ -48,6 +48,7 @@
 @mixin heart__empty {
     background: linear-gradient(to top right, $color-secondary, $color-primary);
     background-clip: text; 
+    -webkit-background-clip: text;
     color: black;
     cursor: pointer;
 }
@@ -56,6 +57,7 @@
     background: linear-gradient(to top right, $color-secondary, $color-primary);
     opacity: 0;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     cursor: pointer;
 }

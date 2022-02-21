@@ -165,7 +165,7 @@
                     padding: 0.7rem 0.8rem;
                     font-size: 100%;
                     &:hover > .card__prix {
-                        right: $prix_right_dsk2;
+                        right: calc($prix_right_tab + calc($selec_width_tab * 0.8));
                     }
                     &:hover > .card__selec {
                         right: 0;
@@ -179,8 +179,10 @@
                         padding-top: 0.26rem;
                     }
                     &__prix {
-                        right: 1rem;
+                        right: $prix_right_tab;
                         padding-bottom: 0.6rem;
+                        // transition: right calc($selec-dur * 0.95) calc($selec-dur * 0.06) ease-in-out;
+                        transition: right calc($selec-dur * 0.75) calc($selec-dur * 0.17) ease-in-out;
                     }
                     &__selec {
                         width: 22%;

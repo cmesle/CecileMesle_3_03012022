@@ -148,7 +148,8 @@
                     margin-bottom: unset;
                     padding: 1rem;
                     &:hover > .card__prix {
-                        right: $prix_right_dsk2;
+                        // right: $prix_right_dsk2;
+                        right: calc($prix_right_dsk + calc($selec_width * 0.8));
                     }
                     &__info {
                     }

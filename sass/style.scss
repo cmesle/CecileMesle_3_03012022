@@ -355,11 +355,13 @@ main {
                 }
                 &:hover > .card__selec i {
                     animation: platselec_selec_i $selec-dur forwards;
+                    margin-left: 0;
+                    // transform: rotate(-360deg);
                 }
                 &:hover > .card__prix {
                     // animation: platselec_prix $selec-dur forwards;
-                    $selec_width: 20%;
-                    $prix_right_mob: 7%;
+                    // $selec_width: 20%;
+                    // $prix_right_mob: 7%;
                     right: calc($prix_right_mob + calc($selec_width * 0.8));
                 }
 
@@ -409,6 +411,7 @@ main {
                     & i {
                         // transform: rotate(90deg);
                         margin-left: -30%;
+                        transition: margin-left $selec-dur ease-in-out;
                     }
                 }
             }

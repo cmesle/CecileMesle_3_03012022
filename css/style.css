@@ -165,20 +165,12 @@ a {
 @keyframes platselec_selec_i {
   0% {
     transform: rotate(90deg);
-    margin-left: -30%;
-  }
-  40% {
-    margin-left: -30%;
   }
   50% {
     transform: rotate(90deg);
   }
-  99% {
-    margin-left: 0;
-  }
   100% {
     transform: rotate(360deg);
-    margin-left: 0;
   }
 }
 /*SPINNER */
@@ -488,6 +480,7 @@ main .restaurants .card .heart:hover > .heart__full {
 main .restaurants .card .heart__empty {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: black;
   cursor: pointer;
 }
@@ -496,6 +489,7 @@ main .restaurants .card .heart__full {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
@@ -570,6 +564,7 @@ main .restaurants .card__new {
 .menu .menu__header .heart__empty {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: black;
   cursor: pointer;
 }
@@ -578,6 +573,7 @@ main .restaurants .card__new {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   opacity: 0;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
 }
@@ -653,6 +649,7 @@ main .restaurants .card__new {
 }
 .menu .cat .card:hover > .card__selec i {
   animation: platselec_selec_i 500ms forwards;
+  margin-left: 0;
 }
 .menu .cat .card:hover > .card__prix {
   right: 23%;
@@ -702,6 +699,7 @@ main .restaurants .card__new {
 }
 .menu .cat .card__selec i {
   margin-left: -30%;
+  transition: margin-left 500ms ease-in-out;
 }
 .menu .btn {
   margin: 10vw auto 20vw;
@@ -874,7 +872,7 @@ footer .footer__menu a {
     padding: 1rem;
   }
   MAIN #cat__container .cat .card:hover > .card__prix {
-    right: calc(1.5rem + 20%);
+    right: calc(1.5rem + 16%);
   }
   MAIN #cat__container .cat .card__detail {
     padding-top: 0.26rem;
@@ -1064,7 +1062,7 @@ footer .footer__menu a {
     font-size: 100%;
   }
   MAIN #cat__container .cat .card:hover > .card__prix {
-    right: calc(1.5rem + 20%);
+    right: calc(1rem + 17.6%);
   }
   MAIN #cat__container .cat .card:hover > .card__selec {
     right: 0;
@@ -1075,6 +1073,7 @@ footer .footer__menu a {
   MAIN #cat__container .cat .card__prix {
     right: 1rem;
     padding-bottom: 0.6rem;
+    transition: right 375ms 85ms ease-in-out;
   }
   MAIN #cat__container .cat .card__selec {
     width: 22%;

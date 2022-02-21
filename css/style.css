@@ -35,8 +35,6 @@ a {
   cursor: pointer;
 }
 
-/* loader */
-/* loader */
 @keyframes rotate {
   from {
     transform: rotate(0);
@@ -111,7 +109,6 @@ a {
     z-index: -999;
   }
 }
-/* remplissage coeur */
 @keyframes heartfade {
   0% {
     color: black;
@@ -143,7 +140,6 @@ a {
     transform: scale(1);
   }
 }
-/* APPARITION DES PLATS */
 @keyframes cardappeark {
   0% {
     transform: translateY(1.5vw);
@@ -161,7 +157,6 @@ a {
     opacity: 1;
   }
 }
-/* SELECTION D'UN PLAT */
 @keyframes platselec_selec_i {
   0% {
     transform: rotate(90deg);

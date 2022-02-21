@@ -7,12 +7,12 @@
         margin: 3%;
     }
     .loader {
-        // display: none;
         .spinner {
             width: $plate-size--dsk;
             height: $plate-size--dsk;
         }
     }
+
     // ACCUEIL
     header {
         padding: 4% 0 2%;
@@ -50,15 +50,12 @@
                 }
             }
         }
+
         .fctt {
             display: flex;
             flex-wrap: wrap;
             align-items: baseline;
             padding: 5vw;
-            h1 {
-//                width: 100%;
-                // margin-bottom: unset;
-            }
             .fctt__cont {
                 display: flex;
                 flex-grow: 1;
@@ -170,18 +167,13 @@
                     &:hover > .card__selec {
                         right: 0;
                     }
-                    &__info {
-                    }
-                    &__nom {
 
-                    }
                     &__detail {
                         padding-top: 0.26rem;
                     }
                     &__prix {
                         right: $prix_right_tab;
                         padding-bottom: 0.6rem;
-                        // transition: right calc($selec-dur * 0.95) calc($selec-dur * 0.06) ease-in-out;
                         transition: right calc($selec-dur * 0.75) calc($selec-dur * 0.17) ease-in-out;
                     }
                     &__selec {

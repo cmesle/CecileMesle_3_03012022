@@ -4,7 +4,6 @@
         margin: 3%;
     }
     .loader {
-        // display: none;
         .spinner {
             width: $plate-size--dsk;
             height: $plate-size--dsk;
@@ -52,7 +51,6 @@
             align-items: baseline;
             padding: 5vw;
             h1 {
-//                width: 100%;
                 margin-bottom: unset;
             }
             .fctt__cont {
@@ -77,6 +75,7 @@
                 }
             }
         }
+
         .restaurants {
             display: flex;
             flex-wrap: wrap;
@@ -148,14 +147,9 @@
                     margin-bottom: unset;
                     padding: 1rem;
                     &:hover > .card__prix {
-                        // right: $prix_right_dsk2;
                         right: calc($prix_right_dsk + calc($selec_width * 0.8));
                     }
-                    &__info {
-                    }
-                    &__nom {
 
-                    }
                     &__detail {
                         padding-top: 0.26rem;
                     }

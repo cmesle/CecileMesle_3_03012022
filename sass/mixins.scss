@@ -62,6 +62,7 @@
     cursor: pointer;
 }
 
+// CARTES : RESTAURANTS ET PLATS
 @mixin card {
     position: relative;
     border-radius: 1rem;
@@ -74,7 +75,7 @@
     }
 }
 
-//APPARITION DES PLATS
+// APPARITION DES PLATS
 @mixin cardappear($delay) {
     $delay-stash: calc($cardappear-dur / $delay);
     @if unitless($delay-stash) {
@@ -86,5 +87,4 @@
             animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
         }
 
-//     animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
 }

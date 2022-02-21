@@ -32,7 +32,6 @@ body {
         width: $plate-size;
         height: $plate-size;
         &__plate {
-
             &--1 {
                 @include flexcenter;
                 width: 100%;
@@ -91,9 +90,6 @@ body {
             }
         }
     }
-
-
-
 }
 
 header {
@@ -336,7 +332,9 @@ main {
                 }
             }
             @for $i from 1 through 9 {
-                .card--#{$i} {@include cardappear(calc(10 / $i));}
+                .card--#{$i} {
+                    @include cardappear(calc(10 / $i));}
+                    // animation: cardappeark $cardappear-dur calc(10 / $i) ease-out forwards;}
             }
             .card {
                 @include card;
@@ -350,18 +348,13 @@ main {
                     width: 67%;
                 }
                 &:hover > .card__selec {
-                    // animation: platselec_selec $selec-dur forwards;
                     right: 0;
                 }
                 &:hover > .card__selec i {
                     animation: platselec_selec_i $selec-dur forwards;
                     margin-left: 0;
-                    // transform: rotate(-360deg);
                 }
                 &:hover > .card__prix {
-                    // animation: platselec_prix $selec-dur forwards;
-                    // $selec_width: 20%;
-                    // $prix_right_mob: 7%;
                     right: calc($prix_right_mob + calc($selec_width * 0.8));
                 }
 
@@ -392,7 +385,6 @@ main {
                     padding-bottom: 3vw;
                     font-size: 0.9rem;
                     font-weight: 800;
-                    // transition: right calc($selec-dur * 1) calc($selec-dur * 0.05) ease-in-out;
                     transition: right calc($selec-dur * 0.95) calc($selec-dur * 0.06) ease-in-out;
                 }
                 &__selec {
@@ -409,7 +401,6 @@ main {
                     font-size: 135%;
                     transition: right $selec-dur cubic-bezier(.15,.35,0,-.35);
                     & i {
-                        // transform: rotate(90deg);
                         margin-left: -30%;
                         transition: margin-left $selec-dur ease-in-out;
                     }

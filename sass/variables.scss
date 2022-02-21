@@ -1,19 +1,16 @@
-/* loader */
+// LOADER
 $plate-size: 40vw;
 $plate-size--dsk: 9.5rem;
 
-
+// ACCUEIL : LOCALISATION
 $ville-hgt: 13vw;
 $gradient-hgt: 0.35rem;
-// $box-shadow: 0 0.235rem 0.5rem darken($color-fond, 12%);
-// $box-shadow--hover: 0 0.35rem 0.47rem darken($color-fond, 20%);
 $etape-hgt : 20vw;
 
-
+// SLELECTION DES PLATS
 $prix_right_mob: 7%;
 $prix_right_tab: 1rem;
 $prix_right_dsk: 1.5rem;
 $selec_width: 20%;
 $selec_width_tab: 22%;
-// $prix_right_mob2: calc($prix_right_mob + calc($selec_width * 0.8));
 $prix_right_dsk2: calc($prix_right_dsk + $selec_width);

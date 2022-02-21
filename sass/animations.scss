@@ -1,4 +1,4 @@
-/* loader */
+// LOADER
 $rotate-dur: 2s;
 @keyframes rotate {
     from {transform: rotate(0);}
@@ -16,7 +16,6 @@ $fadein-dur: 2s;
     100% {
         opacity: 1;
         transform: translateX(-145%);
-        // transform: translateX(-24vw);
     }
 }
 
@@ -75,8 +74,7 @@ $fadein-dur: 2s;
     to {opacity: 0;    z-index: -999;}
 }
 
-/* remplissage coeur */
-
+// REMPLISSAGE COEUR
 @keyframes heartfade {
     0% {
         color: black;
@@ -111,8 +109,7 @@ $fadein-dur: 2s;
     }
 }
 
-/* APPARITION DES PLATS */
-
+// APPARITION DES PLATS
 $cardappear-dur: 1s;
 @keyframes cardappeark {
     0% {
@@ -132,44 +129,17 @@ $cardappear-dur: 1s;
     }
 }
 
-/* SELECTION D'UN PLAT */
+// SELECTION D'UN PLAT
 $selec-dur: 500ms;
 @keyframes platselec_selec_i {
     0% {
         transform: rotate(90deg);
-        // margin-left: -30%;
-    }
-    40% {
-        // margin-left: -30%;
     }
     50% {
         transform: rotate(90deg);
     }
-    99% {
-        // margin-left: 0;
-    }
     100% {
         transform: rotate(360deg);
-        // margin-left: 0;
     }
     
 }
-// @keyframes platselec_prix {
-//     0% {right: $prix_right_mob;    }
-//     5% {
-//         right: $prix_right_mob;
-//     }
-//     100% {
-//         right: $prix_right_mob2;
-//     }
-// }
-// @media screen and (min-width: 992px) {
-//     @keyframes platselec_prix {
-//         0% {
-        
-//         }
-//         100% {
-//             right: $prix_right_dsk2;
-//         }
-//     }
-// }

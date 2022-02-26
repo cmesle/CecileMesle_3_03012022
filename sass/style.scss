@@ -10,7 +10,9 @@
 @import "mixins";
 
 
-
+html {
+    font-size: 4.25vw;
+}
 body {
     font-family: 'Roboto';
 }
@@ -113,9 +115,9 @@ header {
 .btn {
     @include flexcenter;
     margin: 9% 6% 6%;
-    width: 226px;
     height: 3.15rem;
-    border-radius: 25px;
+    padding: 1.5rem;
+    border-radius: 10vw;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     @include box-shadow(20%);
     font-weight: 500;
@@ -331,10 +333,9 @@ main {
                     background-color: $color-tertiary;
                 }
             }
-            @for $i from 1 through 9 {
+            @for $i from 1 through 10 {
                 .card--#{$i} {
-                    @include cardappear(calc(10 / $i));}
-                    // animation: cardappeark $cardappear-dur calc(10 / $i) ease-out forwards;}
+                    animation: cardappeark $cardappear-dur calc(calc($i / 10) * $cardappear-dur) ease-out forwards;}
             }
             .card {
                 @include card;
@@ -359,17 +360,19 @@ main {
                 }
 
                 &__info {
-                    width: 80%;
                     white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     transition: width calc($selec-dur * 0.9) calc($selec-dur * 0.06) ease-in-out;
                 }
                 &__nom {
                     overflow: hidden;
                     font-weight: 700;
                     text-overflow: ellipsis;
+                    word-break: break-all;
                 }
                 &__detail {
-                    padding-top: 1.1vw;
+                    margin-top: 1.1vw;
                     overflow: hidden;
                     font-size: 0.9rem;
                     font-weight: 300;
@@ -410,7 +413,6 @@ main {
         .btn {
             margin: 10vw auto 20vw;
             width: 53%;
-            max-width: 226px;
         }
     }
 

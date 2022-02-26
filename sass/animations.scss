@@ -113,10 +113,10 @@ $fadein-dur: 2s;
 $cardappear-dur: 1s;
 @keyframes cardappeark {
     0% {
-        transform: translateY(1.5vw);
+        transform: translateY(30%);
     }
     20% {
-        transform: translateY(1.5vw);
+        transform: translateY(30%);
     }
     33% {
         opacity: 0.5;

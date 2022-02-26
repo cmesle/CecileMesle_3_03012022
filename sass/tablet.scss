@@ -1,7 +1,10 @@
 @media screen and (min-width: 770px) and (max-width:1024px) {
-    body {
+    html {
         font-size: 90%;
     }
+}
+@media screen and (min-width: 770px) and (max-width:1280px) {
+
     .btn {
         line-height: 2rem;
         margin: 3%;
@@ -82,10 +85,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 2rem;
             width: 100%;
             padding: 3vw 5vw;
-            @media screen and (max-width:869px) {
+            @media screen and (max-width:897px) {
                 justify-content: space-evenly;
             }
             h1 {
@@ -95,7 +98,7 @@
                 width: 20%;
                 min-width: 250px;
                 margin-bottom: unset;
-                @media screen and (max-width:869px) {
+                @media screen and (max-width:897px) {
                     margin-bottom: 2rem;
                 }
                 &__info {
@@ -124,7 +127,7 @@
                 justify-content: space-evenly;
                 width: 35%;
                 margin: auto;
-                padding: 1rem 1rem 0 0;
+                padding-top: 1rem;
                 h1 {
                     margin: 0 1rem 0 0;
                     font-weight: unset;
@@ -135,6 +138,7 @@
             }
             .btn {
                 margin: auto;
+                width: 226px;
             }
         }
         #cat__container {
@@ -158,6 +162,7 @@
                 }
                 .card {
                     width: 31.5%;
+                    min-width: 295px;
                     margin-bottom: unset;
                     padding: 0.7rem 0.8rem;
                     font-size: 100%;
@@ -169,7 +174,7 @@
                     }
 
                     &__detail {
-                        padding-top: 0.26rem;
+                        margin-top: 0.26rem;
                     }
                     &__prix {
                         right: $prix_right_tab;

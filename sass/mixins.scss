@@ -74,17 +74,3 @@
         @include box-shadow--hover(20%);
     }
 }
-
-// APPARITION DES PLATS
-@mixin cardappear($delay) {
-    $delay-stash: calc($cardappear-dur / $delay);
-    @if unitless($delay-stash) {
-        $delay-def: #{$delay-stash}s;
-        animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
-    }
-        @else {
-            $delay-def: calc($delay-stash + 1s);
-            animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
-        }
-
-}

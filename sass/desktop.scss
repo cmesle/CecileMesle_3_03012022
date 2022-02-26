@@ -1,4 +1,13 @@
 @media screen and (min-width:1024px) {
+    html {
+        font-size: unset;
+    }
+}
+@media screen and (min-width:1280px) {
+    body {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
     .btn {
         line-height: 2rem;
         margin: 3%;
@@ -25,6 +34,10 @@
         }
 
         .loca {
+            @media screen and (min-width: 1501px) {
+                border-radius: 30px 30px 0 0;
+                overflow: hidden;
+            }
             .ville {
                 height: unset;
                 line-height: 2rem;
@@ -49,7 +62,7 @@
         .fctt {
             display: flex;
             align-items: baseline;
-            padding: 5vw;
+            padding: 5%;
             h1 {
                 margin-bottom: unset;
             }
@@ -63,6 +76,7 @@
             &__etape {
                 width: 25%;
                 $width: 1.5rem;
+                left: calc($width / 2);
                 margin-bottom: unset;
                 padding-right: 1rem;
                 &__nb {
@@ -82,14 +96,14 @@
             justify-content: space-between;
             gap: 1rem;
             width: 100%;
-            padding: 3vw 5vw;
+            padding: 5%;
             h1 {
                 width: 100%;
             }
             .card {
                 width: 20%;
                 min-width: 250px;
-                margin-bottom: unset;
+                margin-bottom: 2rem;
                 &__info {
                     padding: 1rem;
                 }
@@ -100,8 +114,10 @@
     //RESTAURANTS
     MAIN {
         .resto__header {
-            width: 25%;
+            @include flexcenter;
+            width: 30%;
             height: 14vw;
+            max-height: 210px;
             margin: auto;
             overflow: hidden;
             border-radius: 25px;
@@ -116,7 +132,6 @@
                 justify-content: center;
                 margin: auto;
                 padding-top: 1.5vw;
-                padding-right: 1rem;
                 h1 {
                     margin: 0 5vw 0 0;
                 }
@@ -126,16 +141,16 @@
             }
             .btn {
                 margin: auto;
+                width: 226px;
             }
         }
         #cat__container {
             display: flex;
             justify-content: space-between;
-            gap: 2rem;
             .cat {
                 position: relative;
                 gap: 1rem;
-                width: 30%;
+                width: 32%;
                 margin: 4vw 0 5vw;
                 padding: 1rem;
                 border-radius: 1rem;
@@ -151,7 +166,7 @@
                     }
 
                     &__detail {
-                        padding-top: 0.26rem;
+                        margin-top: 0.26rem;
                     }
                     &__prix {
                         right: 1.5rem;
@@ -166,7 +181,7 @@
     }
 
     footer {
-        padding: 5vw;
+        padding: 5%;
         text-align: right;
         .footer__menu {
             margin-bottom: 0;

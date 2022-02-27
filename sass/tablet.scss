@@ -157,6 +157,9 @@
                 padding: 0.8rem;
                 border-radius: 1rem;
                 background-color: $color-fond;
+                @media screen and (min-width:770px) and (max-width:996px) {
+                    justify-content: space-around;
+                }
                 .h2__style {
                     margin-bottom: unset;
                 }
@@ -167,7 +170,8 @@
                     padding: 0.7rem 0.8rem;
                     font-size: 100%;
                     &:hover > .card__prix {
-                        right: calc($prix_right_tab + calc($selec_width_tab * 0.8));
+                        right: calc($prix_right_tab + calc($selec_width * 0.85));
+                        // right: calc($prix_right_tab + calc($selec_width_tab * 0.8));
                     }
                     &:hover > .card__selec {
                         right: 0;
@@ -179,13 +183,11 @@
                     &__prix {
                         right: $prix_right_tab;
                         padding-bottom: 0.6rem;
-                        transition: right calc($selec-dur * 0.75) calc($selec-dur * 0.17) ease-in-out;
+                        // transition: right calc($selec-dur * 0.75) calc($selec-dur * 0.17) ease-in-out;
                     }
                     &__selec {
-                        width: 22%;
-                        right: -22%;
                         font-size: 150%;
-                        transition: right $selec-dur ease-in-out;
+                        // transition: right $selec-dur ease-in-out;
                     }
                 }
             }

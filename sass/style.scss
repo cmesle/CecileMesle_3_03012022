@@ -335,7 +335,11 @@ main {
             }
             @for $i from 1 through 10 {
                 .card--#{$i} {
-                    animation: cardappeark $cardappear-dur calc(calc($i / 10) * $cardappear-dur) ease-out forwards;}
+                    $delay: 0.5;  //délai avant départ de l'animation, pur assurer chargement préalable de l'image
+                    $delay-stash: calc($i / 10) + $delay; //incrémentation du délai pour chaque card
+                    $delay-def: #{$delay-stash}s; //ajout de l'unité "s" au délai calculé
+                    animation: cardappeark $cardappear-dur $delay-def ease-out forwards;
+                }
             }
             .card {
                 @include card;

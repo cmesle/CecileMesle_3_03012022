@@ -657,6 +657,7 @@ main .restaurants .card__new {
   right: 23%;
 }
 .menu .cat .card__info {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
